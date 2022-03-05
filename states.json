@@ -1,0 +1,302 @@
+[
+  {
+    "id": 1,
+    "name": "Alabama",
+    "abbr": "AL",
+    "recycleRate": 0.75
+  },
+  {
+    "id": 2,
+    "name": "Alaska",
+    "abbr": "AK",
+    "recycleRate": 5
+  },
+  {
+    "id": 3,
+    "name": "Arizona",
+    "abbr": "AZ",
+    "recycleRate": 30
+  },
+  {
+    "id": 4,
+    "name": "Arkansas",
+    "abbr": "AR",
+    "recycleRate": 0.05
+  },
+  {
+    "id": 5,
+    "name": "California",
+    "abbr": "CA",
+    "recycleRate": 65
+  },
+  {
+    "id": 6,
+    "name": "Colorado",
+    "abbr": "CO",
+    "recycleRate": 80
+  },
+  {
+    "id": 7,
+    "name": "Connecticut",
+    "abbr": "CT",
+    "recycleRate": 55
+  },
+  {
+    "id": 8,
+    "name": "Delaware",
+    "abbr": "DE",
+    "recycleRate": 35
+  },
+  {
+    "id": 9,
+    "name": "Florida",
+    "abbr": "FL",
+    "recycleRate": 20
+  },
+  {
+    "id": 10,
+    "name": "Georgia",
+    "abbr": "GA",
+    "recycleRate": 50
+  },
+  {
+    "id": 11,
+    "name": "Hawaii",
+    "abbr": "HI",
+    "recycleRate": 75
+  },
+  {
+    "id": 12,
+    "name": "Idaho",
+    "abbr": "ID",
+    "recycleRate": 45
+  },
+  {
+    "id": 13,
+    "name": "Illinois",
+    "abbr": "IL",
+    "recycleRate": 65
+  },
+  {
+    "id": 14,
+    "name": "Indiana",
+    "abbr": "IN",
+    "recycleRate": 35
+  },
+  {
+    "id": 15,
+    "name": "Iowa",
+    "abbr": "IA",
+    "recycleRate": 44
+  },
+  {
+    "id": 16,
+    "name": "Kansas",
+    "abbr": "AL",
+    "recycleRate": 0.75
+  },
+  {
+    "id": 1,
+    "name": "Kentucky",
+    "abbr": "AL",
+    "recycleRate": 0.75
+  },
+  {
+    "id": 1,
+    "name": "Louisiana",
+    "abbr": "AL",
+    "recycleRate": 0.75
+  },
+  {
+    "id": 1,
+    "name": "Maine",
+    "abbr": "AL",
+    "recycleRate": 0.75
+  },
+  {
+    "id": 1,
+    "name": "Maryland",
+    "abbr": "AL",
+    "recycleRate": 0.75
+  },
+  {
+    "id": 1,
+    "name": "Massachusetts",
+    "abbr": "AL",
+    "recycleRate": 0.75
+  },
+  {
+    "id": 1,
+    "name": "Michigan",
+    "abbr": "AL",
+    "recycleRate": 0.75
+  },
+  {
+    "id": 1,
+    "name": "Minnesota",
+    "abbr": "AL",
+    "recycleRate": 0.75
+  },
+  {
+    "id": 1,
+    "name": "Mississippi",
+    "abbr": "AL",
+    "recycleRate": 0.75
+  },
+  {
+    "id": 1,
+    "name": "Missouri",
+    "abbr": "AL",
+    "recycleRate": 0.75
+  },
+  {
+    "id": 1,
+    "name": "Montana",
+    "abbr": "AL",
+    "recycleRate": 0.75
+  },
+  {
+    "id": 1,
+    "name": "Nebraska",
+    "abbr": "AL",
+    "recycleRate": 0.75
+  },
+  {
+    "id": 1,
+    "name": "Nevada",
+    "abbr": "AL",
+    "recycleRate": 0.75
+  },
+  {
+    "id": 1,
+    "name": "New Hampshire",
+    "abbr": "AL",
+    "recycleRate": 0.75
+  },
+  {
+    "id": 1,
+    "name": "New Jersey",
+    "abbr": "AL",
+    "recycleRate": 0.75
+  },
+  {
+    "id": 1,
+    "name": "New Mexico",
+    "abbr": "AL",
+    "recycleRate": 0.75
+  },
+  {
+    "id": 1,
+    "name": "New York",
+    "abbr": "AL",
+    "recycleRate": 0.75
+  },
+  {
+    "id": 1,
+    "name": "North Carolina",
+    "abbr": "AL",
+    "recycleRate": 0.75
+  },
+  {
+    "id": 1,
+    "name": "North Dakota",
+    "abbr": "AL",
+    "recycleRate": 0.75
+  },
+  {
+    "id": 1,
+    "name": "Ohia",
+    "abbr": "AL",
+    "recycleRate": 0.75
+  },
+  {
+    "id": 1,
+    "name": "Oklahoma",
+    "abbr": "AL",
+    "recycleRate": 0.75
+  },
+  {
+    "id": 1,
+    "name": "Oregon",
+    "abbr": "AL",
+    "recycleRate": 0.75
+  },
+  {
+    "id": 1,
+    "name": "Pennsylvania",
+    "abbr": "AL",
+    "recycleRate": 0.75
+  },
+  {
+    "id": 1,
+    "name": "Road Island",
+    "abbr": "AL",
+    "recycleRate": 0.75
+  },
+  {
+    "id": 1,
+    "name": "South Carolina",
+    "abbr": "AL",
+    "recycleRate": 0.75
+  },
+  {
+    "id": 1,
+    "name": "South Dakota",
+    "abbr": "AL",
+    "recycleRate": 0.75
+  },
+  {
+    "id": 1,
+    "name": "Tennessee",
+    "abbr": "AL",
+    "recycleRate": 0.75
+  },
+  {
+    "id": 1,
+    "name": "Texas",
+    "abbr": "AL",
+    "recycleRate": 0.75
+  },
+  {
+    "id": 1,
+    "name": "Utah",
+    "abbr": "AL",
+    "recycleRate": 0.75
+  },
+  {
+    "id": 1,
+    "name": "Vermont",
+    "abbr": "AL",
+    "recycleRate": 0.75
+  },
+  {
+    "id": 1,
+    "name": "Virgina",
+    "abbr": "AL",
+    "recycleRate": 0.75
+  },
+  {
+    "id": 1,
+    "name": "Washington",
+    "abbr": "AL",
+    "recycleRate": 0.75
+  },
+  {
+    "id": 1,
+    "name": "West Virgina",
+    "abbr": "AL",
+    "recycleRate": 0.75
+  },
+  {
+    "id": 1,
+    "name": "Wisconsin",
+    "abbr": "AL",
+    "recycleRate": 0.75
+  },
+  {
+    "id": 1,
+    "name": "Wyoming",
+    "abbr": "AL",
+    "recycleRate": 0.75
+  }
+]
