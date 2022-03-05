@@ -3,306 +3,357 @@
     "id": 1,
     "name": "Alabama",
     "abbr": "AL",
-    "recycleRate": 0.75
+    "recycleRate": 0.75,
+    "url": "https://google.com"
   },
   {
     "id": 2,
     "name": "Alaska",
     "abbr": "AK",
-    "recycleRate": 5
+    "recycleRate": 5,
+    "url": "https://google.com"
   },
   {
     "id": 3,
     "name": "Arizona",
     "abbr": "AZ",
-    "recycleRate": 30
+    "recycleRate": 30,
+    "url": "https://google.com"
   },
   {
     "id": 4,
     "name": "Arkansas",
     "abbr": "AR",
-    "recycleRate": 0.05
+    "recycleRate": 0.05,
+    "url": "https://google.com"
   },
   {
     "id": 5,
     "name": "California",
     "abbr": "CA",
-    "recycleRate": 65
+    "recycleRate": 65,
+    "url": "https://google.com"
   },
   {
     "id": 6,
     "name": "Colorado",
     "abbr": "CO",
-    "recycleRate": 80
+    "recycleRate": 80,
+    "url": "https://google.com"
   },
   {
     "id": 7,
     "name": "Connecticut",
     "abbr": "CT",
-    "recycleRate": 55
+    "recycleRate": 55,
+    "url": "https://google.com"
   },
   {
     "id": 8,
     "name": "Delaware",
     "abbr": "DE",
-    "recycleRate": 35
+    "recycleRate": 35,
+    "url": "https://google.com"
   },
   {
     "id": 9,
     "name": "Florida",
     "abbr": "FL",
-    "recycleRate": 20
+    "recycleRate": 20,
+    "url": "https://google.com"
   },
   {
     "id": 10,
     "name": "Georgia",
     "abbr": "GA",
-    "recycleRate": 50
+    "recycleRate": 50,
+    "url": "https://google.com"
   },
   {
     "id": 11,
     "name": "Hawaii",
     "abbr": "HI",
-    "recycleRate": 75
+    "recycleRate": 75,
+    "url": "https://google.com"
   },
   {
     "id": 12,
     "name": "Idaho",
     "abbr": "ID",
-    "recycleRate": 45
+    "recycleRate": 45,
+    "url": "https://google.com"
   },
   {
     "id": 13,
     "name": "Illinois",
     "abbr": "IL",
-    "recycleRate": 65
+    "recycleRate": 65,
+    "url": "https://google.com"
   },
   {
     "id": 14,
     "name": "Indiana",
     "abbr": "IN",
-    "recycleRate": 35
+    "recycleRate": 35,
+    "url": "https://google.com"
   },
   {
     "id": 15,
     "name": "Iowa",
     "abbr": "IA",
-    "recycleRate": 44
+    "recycleRate": 44,
+    "url": "https://google.com"
   },
   {
     "id": 16,
     "name": "Kansas",
     "abbr": "AL",
-    "recycleRate": 0.75
+    "recycleRate": 0.75,
+    "url": "https://google.com"
   },
   {
     "id": 17,
     "name": "Kentucky",
     "abbr": "KY",
-    "recycleRate": 35
+    "recycleRate": 35,
+    "url": "https://google.com"
   },
   {
     "id": 18,
     "name": "Louisiana",
     "abbr": "LA",
-    "recycleRate": 22
+    "recycleRate": 22,
+    "url": "https://google.com"
   },
   {
     "id": 19,
     "name": "Maine",
     "abbr": "ME",
-    "recycleRate": 31
+    "recycleRate": 31,
+    "url": "https://google.com"
   },
   {
     "id": 20,
     "name": "Maryland",
     "abbr": "MD",
-    "recycleRate": 44
+    "recycleRate": 44,
+    "url": "https://google.com"
   },
   {
     "id": 21,
     "name": "Massachusetts",
     "abbr": "MA",
-    "recycleRate": 65
+    "recycleRate": 65,
+    "url": "https://google.com"
   },
   {
     "id": 22,
     "name": "Michigan",
     "abbr": "MI",
-    "recycleRate": 67
+    "recycleRate": 67,
+    "url": "https://google.com"
   },
   {
     "id": 23,
     "name": "Minnesota",
     "abbr": "MN",
-    "recycleRate": 87
+    "recycleRate": 87,
+    "url": "https://google.com"
   },
   {
     "id": 24,
     "name": "Mississippi",
     "abbr": "MS",
-    "recycleRate": 0.75
+    "recycleRate": 0.75,
+    "url": "https://google.com"
   },
   {
     "id": 25,
     "name": "Missouri",
     "abbr": "MO",
-    "recycleRate": 19
+    "recycleRate": 19,
+    "url": "https://google.com"
   },
   {
     "id": 26,
     "name": "Montana",
     "abbr": "MT",
-    "recycleRate": 55
+    "recycleRate": 55,
+    "url": "https://google.com"
   },
   {
     "id": 27,
     "name": "Nebraska",
     "abbr": "NE",
-    "recycleRate": 43
+    "recycleRate": 43,
+    "url": "https://google.com"
   },
   {
     "id": 28,
     "name": "Nevada",
     "abbr": "NV",
-    "recycleRate": 63
+    "recycleRate": 63,
+    "url": "https://google.com"
   },
   {
     "id": 29,
     "name": "New Hampshire",
     "abbr": "NH",
-    "recycleRate": 63
+    "recycleRate": 63,
+    "url": "https://google.com"
   },
   {
     "id": 30,
     "name": "New Jersey",
     "abbr": "NJ",
-    "recycleRate": 44
+    "recycleRate": 44,
+    "url": "https://google.com"
   },
   {
     "id": 31,
     "name": "New Mexico",
     "abbr": "NM",
-    "recycleRate": 77
+    "recycleRate": 77,
+    "url": "https://google.com"
   },
   {
     "id": 32,
     "name": "New York",
     "abbr": "NY",
-    "recycleRate": 39
+    "recycleRate": 39,
+    "url": "https://google.com"
   },
   {
     "id": 33,
     "name": "North Carolina",
     "abbr": "NC",
-    "recycleRate": 21
+    "recycleRate": 21,
+    "url": "https://google.com"
   },
   {
     "id": 34,
     "name": "North Dakota",
     "abbr": "ND",
-    "recycleRate": 11
+    "recycleRate": 11,
+    "url": "https://google.com"
   },
   {
     "id": 35,
     "name": "Ohia",
     "abbr": "OH",
-    "recycleRate": 26
+    "recycleRate": 26,
+    "url": "https://google.com"
   },
   {
     "id": 36,
     "name": "Oklahoma",
     "abbr": "OK",
-    "recycleRate": 8
+    "recycleRate": 8,
+    "url": "https://google.com"
   },
   {
     "id": 37,
     "name": "Oregon",
     "abbr": "OR",
-    "recycleRate": 85
+    "recycleRate": 85,
+    "url": "https://google.com"
   },
   {
     "id": 38,
     "name": "Pennsylvania",
     "abbr": "PA",
-    "recycleRate": 47
+    "recycleRate": 47,
+    "url": "https://google.com"
   },
   {
     "id": 39,
     "name": "Road Island",
     "abbr": "RI",
-    "recycleRate": 66
+    "recycleRate": 66,
+    "url": "https://google.com"
   },
   {
     "id": 40,
     "name": "South Carolina",
     "abbr": "SC",
-    "recycleRate": 21
+    "recycleRate": 21,
+    "url": "https://google.com"
   },
   {
     "id": 41,
     "name": "South Dakota",
     "abbr": "SD",
-    "recycleRate": 5
+    "recycleRate": 5,
+    "url": "https://google.com"
   },
   {
     "id": 42,
     "name": "Tennessee",
     "abbr": "TN",
-    "recycleRate": 23
+    "recycleRate": 23,
+    "url": "https://google.com"
   },
   {
     "id": 43,
     "name": "Texas",
     "abbr": "TX",
-    "recycleRate": 43
+    "recycleRate": 43,
+    "url": "https://google.com"
   },
   {
     "id": 44,
     "name": "Utah",
     "abbr": "UT",
-    "recycleRate": 40
+    "recycleRate": 40,
+    "url": "https://google.com"
   },
   {
     "id": 45,
     "name": "Vermont",
     "abbr": "VT",
-    "recycleRate": 45
+    "recycleRate": 45,,
+    "url": "https://google.com"
   },
   {
     "id": 46,
     "name": "Virgina",
     "abbr": "VA",
-    "recycleRate": 25
+    "recycleRate": 25,
+    "url": "https://google.com"
   },
   {
     "id": 47,
     "name": "Washington",
     "abbr": "WA",
-    "recycleRate": 56
+    "recycleRate": 56,
+    "url": "https://google.com"
   },
   {
     "id": 48,
     "name": "West Virgina",
     "abbr": "WV",
-    "recycleRate": 0.75
+    "recycleRate": 0.75,
+    "url": "https://google.com"
   },
   {
     "id": 49,
     "name": "Wisconsin",
     "abbr": "WI",
-    "recycleRate": 37
+    "recycleRate": 37,
+    "url": "https://google.com"
   },
   {
     "id": 50,
     "name": "Wyoming",
     "abbr": "WY",
-    "recycleRate": 3
+    "recycleRate": 3,
+    "url": "https://google.com"
   },
   {
     "id": 51,
     "name": "District of Columbia",
     "abbr": "DC",
-    "recycleRate": 87
+    "recycleRate": 87,
+    "url": "https://google.com"
   }
 ]
