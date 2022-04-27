@@ -1,0 +1,42 @@
+[
+	{
+		"word": "One",
+		"answer": "Uno"
+	},
+	{
+		"word": "Two",
+		"answer": "Dos"
+	},
+	{
+		"word": "Three",
+		"answer": "Tres"
+	},
+	{
+		"word": "Four",
+		"answer": "Cuatro"
+	},
+	{
+		"word": "Five",
+		"answer": "Cinco"
+	},
+	{
+		"word": "Six",
+		"answer": "Seis"
+	},
+	{
+		"word": "Seven",
+		"answer": "Siete"
+	},
+	{
+		"word": "Eight",
+		"answer": "Ocho"
+	},
+	{
+		"word": "Nine",
+		"answer": "Nueve"
+	},
+	{
+		"word": "Ten",
+		"answer": "Diez"
+	}
+]
