@@ -1,5 +1,4 @@
-{
-  markers: [
+markers: [
     {
       position: {
         lat: 51.093048,
@@ -25,4 +24,3 @@
       },
     },
   ]
-}
