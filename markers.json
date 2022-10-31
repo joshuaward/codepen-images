@@ -1,28 +1,16 @@
 {
-  "markers": [
+	"markers": [
+		{
+      "name": "Rixos The Palm Dubai",
+      "position": [25.1212, 55.1535]
+    },
     {
-          position: {
-            lat: 51.093048,
-            lng: 6.84212,
-          },
-        },
-        {
-          position: {
-            lat: 51.198429,
-            lng: 6.69529,
-          },
-        },
-        {
-          position: {
-            lat: 51.165218,
-            lng: 7.067116,
-          },
-        },
-        {
-          position: {
-            lat: 51.09256,
-            lng: 6.84074,
-          },
-        },
-  ]
+      "name": "Shangri-La Hotel",
+      "location": [25.2084, 55.2719]
+    },
+    {
+      "name": "Grand Hyatt",
+      "location": [25.2285, 55.3273]
+    }
+	]
 }
