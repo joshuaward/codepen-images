@@ -1,4 +1,4 @@
-markers: [
+[
     {
       position: {
         lat: 51.093048,
@@ -23,4 +23,4 @@ markers: [
         lng: 6.84074,
       },
     },
-  ]
+]
