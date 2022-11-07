@@ -1,0 +1,262 @@
+{
+	"locations": [
+		{
+			locationID: 1,
+			ringCentralChat: true,
+			locationName: "Windsor Branch",
+			isAtmOnly: false,
+			lat: 29.508455, 
+			lng: -98.380839,
+			address1: "8047 Midcrown Dr",
+			address2: "San Antonio, TX 78218-2335",
+			services: {
+				atm: true,
+				acceptsDeposits: true,
+				coinCounter: false,
+				nightDeposit: true,
+				notaryService: true,
+				safeDepositBoxes: false,
+				wireTransfers: true,
+				computerAccess: false,
+				openSaturday: true,
+				spanish: true
+			},
+			lobbyHours: {
+				sunday: "Closed",
+				monday: "9:00 am - 5:00 pm",
+				tuesday: "9:00 am - 5:00 pm",
+				wednesday: "9:00 am - 5:00 pm",
+				thursday: "9:00 am - 5:00 pm",
+				friday: "9:00 am - 5:00 pm",
+				saturday: "9:00 am - 12:00 pm"
+			},
+			locationAlert: {
+				displayAlert: false,
+				alertMessage: ""
+			},
+			links: [
+				{
+					linkText: "",
+					linkUrl: "",
+					linkTarget: "",
+					linkAriaLabel: ""
+				}
+			]
+		},
+		{
+			locationID: 2,
+			ringCentralChat: true,
+			locationName: "Hackberry Market Financial Health Center",
+			isAtmOnly: false,
+			lat: 29.424924, 
+			lng: -98.473061,
+			address1: "1602 E Houston St",
+			address2: "San Antonio, TX 78202",
+			services: {
+				atm: true,
+				acceptsDeposits: false,
+				coinCounter: false,
+				nightDeposit: false,
+				notaryService: true,
+				safeDepositBoxes: false,
+				wireTransfers: false,
+				computerAccess: false,
+				openSaturday: true,
+				spanish: true
+			},
+			lobbyHours: {
+				sunday: "Closed",
+				monday: "9:00 am - 5:00 pm",
+				tuesday: "9:00 am - 5:00 pm",
+				wednesday: "9:00 am - 5:00 pm",
+				thursday: "9:00 am - 5:00 pm",
+				friday: "9:00 am - 5:00 pm",
+				saturday: "9:00 am - 12:00 pm"
+			},
+			locationAlert: {
+				displayAlert: false,
+				alertMessage: ""
+			},
+			links: [
+				{
+					linkText: "",
+					linkUrl: "",
+					linkTarget: "",
+					linkAriaLabel: ""
+				}
+			]
+		},
+		{
+			locationID: 3,
+			ringCentralChat: true,
+			locationName: "Alamo Quarry Market Financial Health Center",
+			isAtmOnly: false,
+			lat: 29.492650, 
+			lng: -98.482178,
+			address1: "255 E Basse Rd Ste 1528",
+			address2: "San Antonio, TX 78209",
+			services: {
+				atm: true,
+				acceptsDeposits: false,
+				coinCounter: false,
+				nightDeposit: false,
+				notaryService: true,
+				safeDepositBoxes: true,
+				wireTransfers: false,
+				computerAccess: false,
+				openSaturday: true,
+				spanish: true
+			},
+			lobbyHours: {
+				sunday: "Closed",
+				monday: "9:00 am - 5:00 pm",
+				tuesday: "9:00 am - 5:00 pm",
+				wednesday: "9:00 am - 5:00 pm",
+				thursday: "9:00 am - 5:00 pm",
+				friday: "9:00 am - 5:00 pm",
+				saturday: "9:00 am - 12:00 pm"
+			},
+			locationAlert: {
+				displayAlert: false,
+				alertMessage: ""
+			},
+			links: [
+				{
+					linkText: "",
+					linkUrl: "",
+					linkTarget: "",
+					linkAriaLabel: ""
+				}
+			]
+		},
+		{
+			locationID: 4,
+			ringCentralChat: true,
+			locationName: "1703 Broadway Financial Health Center",
+			isAtmOnly: false,
+			lat: 29.442214, 
+			lng: -98.477714,
+			address1: "1703 Broadway Suite 104",
+			address2: "San Antonio, TX 78215",
+			services: {
+				atm: true,
+				acceptsDeposits: false,
+				coinCounter: false,
+				nightDeposit: false,
+				notaryService: true,
+				safeDepositBoxes: true,
+				wireTransfers: false,
+				computerAccess: false,
+				openSaturday: true,
+				spanish: true
+			},
+			lobbyHours: {
+				sunday: "Closed",
+				monday: "9:00 am - 5:00 pm",
+				tuesday: "9:00 am - 5:00 pm",
+				wednesday: "9:00 am - 5:00 pm",
+				thursday: "9:00 am - 5:00 pm",
+				friday: "9:00 am - 5:00 pm",
+				saturday: "9:00 am - 12:00 pm"
+			},
+			locationAlert: {
+				displayAlert: false,
+				alertMessage: ""
+			},
+			links: [
+				{
+					linkText: "",
+					linkUrl: "",
+					linkTarget: "",
+					linkAriaLabel: ""
+				}
+			]
+		},
+		{
+			locationID: 5,
+			ringCentralChat: false,
+			locationName: "Woodlawn Financial Health Center",
+			isAtmOnly: false,
+			lat: 29.458709, 
+			lng: -98.557320,
+			address1: "1003 Bandera Rd Suite 101",
+			address2: "San Antonio, TX 78228",
+			services: {
+				atm: true,
+				acceptsDeposits: false,
+				coinCounter: false,
+				nightDeposit: true,
+				notaryService: true,
+				safeDepositBoxes: true,
+				wireTransfers: true,
+				computerAccess: false,
+				openSaturday: true,
+				spanish: true
+			},
+			lobbyHours: {
+				sunday: "Closed",
+				monday: "9:00 am - 5:00 pm",
+				tuesday: "9:00 am - 5:00 pm",
+				wednesday: "9:00 am - 5:00 pm",
+				thursday: "9:00 am - 5:00 pm",
+				friday: "9:00 am - 5:00 pm",
+				saturday: "9:00 am - 12:00 pm"
+			},
+			locationAlert: {
+				displayAlert: false,
+				alertMessage: ""
+			},
+			links: [
+				{
+					linkText: "",
+					linkUrl: "",
+					linkTarget: "",
+					linkAriaLabel: ""
+				}
+			]
+		},
+		{
+			locationID: 6,
+			ringCentralChat: false,
+			locationName: "Dove Creek Highlands Financial Health Center",
+			isAtmOnly: false,
+			lat: 29.433967, 
+			lng: -98.717346,
+			address1: "11330 Potranco Rd Suite 102",
+			address2: "San Antonio, TX 78253",
+			services: {
+				atm: true,
+				acceptsDeposits: true,
+				coinCounter: true,
+				nightDeposit: true,
+				notaryService: true,
+				safeDepositBoxes: true,
+				wireTransfers: true,
+				computerAccess: true,
+				openSaturday: true,
+				spanish: true
+			},
+			lobbyHours: {
+				sunday: "Closed",
+				monday: "9:00 am - 5:00 pm",
+				tuesday: "9:00 am - 5:00 pm",
+				wednesday: "9:00 am - 5:00 pm",
+				thursday: "9:00 am - 5:00 pm",
+				friday: "9:00 am - 5:00 pm",
+				saturday: "9:00 am - 12:00 pm"
+			},
+			locationAlert: {
+				displayAlert: false,
+				alertMessage: ""
+			},
+			links: [
+				{
+					linkText: "",
+					linkUrl: "",
+					linkTarget: "",
+					linkAriaLabel: ""
+				}
+			]
+		}
+	]
+}
