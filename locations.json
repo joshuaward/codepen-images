@@ -1,6 +1,4 @@
-{
-	"test": "Testing",
-	"locations": [
+[
 		{
 			locationID: 1,
 			ringCentralChat: true,
@@ -260,4 +258,4 @@
 			]
 		}
 	]
-}
+
