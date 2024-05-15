@@ -1,0 +1,1082 @@
+{
+    "total": 179,
+    "prescribers": {
+        "npiNbr": "1861838252",
+        "prescribersReferrals": [
+            {
+                "firstName": "MAURICIO",
+                "lastName": "BOUCHER",
+                "dob": "1993-10-21",
+                "drugName": "ENBREL 25 MG MDV W/DIL 4'S"
+            },
+            {
+                "firstName": "MAURICIO",
+                "lastName": "BOUCHER",
+                "dob": "1993-10-21",
+                "drugName": "ENBREL 25 MG MDV W/DIL 4'S"
+            },
+            {
+                "firstName": "MAURICIO",
+                "lastName": "BOUCHER",
+                "dob": "1993-10-21",
+                "drugName": "ENBREL 25 MG MDV W/DIL 4'S"
+            },
+            {
+                "firstName": "MAURICIO",
+                "lastName": "BOUCHER",
+                "dob": "1993-10-21",
+                "drugName": "ENBREL 25 MG MDV W/DIL 4'S"
+            },
+            {
+                "firstName": "MAURICIO",
+                "lastName": "BOUCHER",
+                "dob": "1993-10-21",
+                "drugName": "ENBREL 25 MG MDV W/DIL 4'S"
+            },
+            {
+                "firstName": "MAURICIO",
+                "lastName": "BOUCHER",
+                "dob": "1993-10-21",
+                "drugName": "ENBREL 25 MG MDV W/DIL 4'S"
+            },
+            {
+                "firstName": "MAURICIO",
+                "lastName": "BOUCHER",
+                "dob": "1993-10-21",
+                "drugName": "ENBREL 25 MG MDV W/DIL 4'S"
+            },
+            {
+                "firstName": "MAURICIO",
+                "lastName": "BOUCHER",
+                "dob": "1993-10-21",
+                "drugName": "ENBREL 25 MG MDV W/DIL 4'S"
+            },
+            {
+                "firstName": "MAURICIO",
+                "lastName": "BOUCHER",
+                "dob": "1993-10-21",
+                "drugName": "ENBREL 25 MG MDV W/DIL 4'S"
+            },
+            {
+                "firstName": "MAURICIO",
+                "lastName": "BOUCHER",
+                "dob": "1993-10-21",
+                "drugName": "ENBREL 25 MG MDV W/DIL 4'S"
+            },
+            {
+                "firstName": "ALEJANDRA",
+                "lastName": "KENNEY",
+                "dob": "1983-08-02",
+                "drugName": "HUMIRA 40 MG/0.8 ML PEN 2'S"
+            },
+            {
+                "firstName": "BVIEBKSHYJ",
+                "lastName": "UKUCEEUBIZ",
+                "dob": "1988-08-22",
+                "drugName": "HUMIRA 80MG/0.8 ML PEN 2'S"
+            },
+            {
+                "firstName": "ARJUN",
+                "lastName": "SARJA",
+                "dob": "1991-12-30",
+                "drugName": "ACTEMRA 80 MG/4 ML VIAL"
+            },
+            {
+                "firstName": "ARJUN",
+                "lastName": "SARJA",
+                "dob": "1991-12-30",
+                "drugName": "ACTEMRA"
+            },
+            {
+                "firstName": "ARJUN",
+                "lastName": "SARJA",
+                "dob": "1991-12-30",
+                "drugName": "ACTEMRA 80 MG/4 ML VIAL"
+            },
+            {
+                "firstName": "ARJUN",
+                "lastName": "SARJA",
+                "dob": "1991-12-30",
+                "drugName": "ACTEMRA 80 MG/4 ML VIAL"
+            },
+            {
+                "firstName": "ARJUN",
+                "lastName": "SARJA",
+                "dob": "1991-12-30",
+                "drugName": "ACTEMRA 80 MG/4 ML VIAL"
+            },
+            {
+                "firstName": "ARJUN",
+                "lastName": "SARJA",
+                "dob": "1991-12-30",
+                "drugName": "ACTEMRA 80 MG/4 ML VIAL"
+            },
+            {
+                "firstName": "ARJUN",
+                "lastName": "SARJA",
+                "dob": "1991-12-30",
+                "drugName": "ACTEMRA 80 MG/4 ML VIAL"
+            },
+            {
+                "firstName": "ARJUN",
+                "lastName": "SARJA",
+                "dob": "1991-12-30",
+                "drugName": "ACTEMRA"
+            },
+            {
+                "firstName": "ARJUN",
+                "lastName": "SARJA",
+                "dob": "1991-12-30",
+                "drugName": "ACTEMRA 80 MG/4 ML VIAL"
+            },
+            {
+                "firstName": "ARJUN",
+                "lastName": "SARJA",
+                "dob": "1991-12-30",
+                "drugName": "ACTEMRA 80 MG/4 ML VIAL"
+            },
+            {
+                "firstName": "ARJUN",
+                "lastName": "SARJA",
+                "dob": "1991-12-30",
+                "drugName": "ACTEMRA 80 MG/4 ML VIAL"
+            },
+            {
+                "firstName": "ARJUN",
+                "lastName": "SARJA",
+                "dob": "1991-12-30",
+                "drugName": "ACTEMRA"
+            },
+            {
+                "firstName": "ARJUN",
+                "lastName": "SARJA",
+                "dob": "1991-12-30",
+                "drugName": "ACTEMRA"
+            },
+            {
+                "firstName": "ARJUN",
+                "lastName": "SARJA",
+                "dob": "1991-12-30",
+                "drugName": "ACTEMRA"
+            },
+            {
+                "firstName": "ARJUN",
+                "lastName": "SARJA",
+                "dob": "1991-12-30",
+                "drugName": "ACTEMRA 80 MG/4 ML VIAL"
+            },
+            {
+                "firstName": "ARJUN",
+                "lastName": "SARJA",
+                "dob": "1991-12-30",
+                "drugName": "ACTEMRA 80 MG/4 ML VIAL"
+            },
+            {
+                "firstName": "LAYLA",
+                "lastName": "KILGORE",
+                "dob": "1988-01-01",
+                "drugName": "ENBREL 25 MG MDV W/DIL 4'S"
+            },
+            {
+                "firstName": "LAYLA",
+                "lastName": "KILGORE",
+                "dob": "1988-01-01",
+                "drugName": "ENBREL 25 MG MDV W/DIL 4'S"
+            },
+            {
+                "firstName": "LAYLA",
+                "lastName": "KILGORE",
+                "dob": "1988-01-01",
+                "drugName": "ENBREL 25 MG MDV W/DIL 4'S"
+            },
+            {
+                "firstName": "LAYLA",
+                "lastName": "KILGORE",
+                "dob": "1988-01-01",
+                "drugName": "ENBREL 25 MG MDV W/DIL 4'S"
+            },
+            {
+                "firstName": "LAYLA",
+                "lastName": "KILGORE",
+                "dob": "1988-01-01",
+                "drugName": "ENBREL 25 MG MDV W/DIL 4'S"
+            },
+            {
+                "firstName": "LAYLA",
+                "lastName": "KILGORE",
+                "dob": "1988-01-01",
+                "drugName": "ENBREL 25 MG MDV W/DIL 4'S"
+            },
+            {
+                "firstName": "LAYLA",
+                "lastName": "KILGORE",
+                "dob": "1988-01-01",
+                "drugName": "ENBREL 25 MG MDV W/DIL 4'S"
+            },
+            {
+                "firstName": "LAYLA",
+                "lastName": "KILGORE",
+                "dob": "1988-01-01",
+                "drugName": "ENBREL 25 MG MDV W/DIL 4'S"
+            },
+            {
+                "firstName": "LAYLA",
+                "lastName": "KILGORE",
+                "dob": "1988-01-01",
+                "drugName": "ENBREL 25 MG MDV W/DIL 4'S"
+            },
+            {
+                "firstName": "LAYLA",
+                "lastName": "KILGORE",
+                "dob": "1988-01-01",
+                "drugName": "ENBREL 25 MG MDV W/DIL 4'S"
+            },
+            {
+                "firstName": "LAYLA",
+                "lastName": "KILGORE",
+                "dob": "1988-01-01",
+                "drugName": "ENBREL 25 MG MDV W/DIL 4'S"
+            },
+            {
+                "firstName": "LAYLA",
+                "lastName": "KILGORE",
+                "dob": "1988-01-01",
+                "drugName": "ENBREL 25 MG MDV W/DIL 4'S"
+            },
+            {
+                "firstName": "LAYLA",
+                "lastName": "KILGORE",
+                "dob": "1988-01-01",
+                "drugName": "ENBREL 25 MG MDV W/DIL 4'S"
+            },
+            {
+                "firstName": "LAYLA",
+                "lastName": "KILGORE",
+                "dob": "1988-01-01",
+                "drugName": "ENBREL 25 MG MDV W/DIL 4'S"
+            },
+            {
+                "firstName": "LAYLA",
+                "lastName": "KILGORE",
+                "dob": "1988-01-01",
+                "drugName": "ENBREL 25 MG MDV W/DIL 4'S"
+            },
+            {
+                "firstName": "LAYLA",
+                "lastName": "KILGORE",
+                "dob": "1988-01-01",
+                "drugName": "ENBREL 25 MG MDV W/DIL 4'S"
+            },
+            {
+                "firstName": "LAYLA",
+                "lastName": "KILGORE",
+                "dob": "1988-01-01",
+                "drugName": "ENBREL 25 MG MDV W/DIL 4'S"
+            },
+            {
+                "firstName": "LAYLA",
+                "lastName": "KILGORE",
+                "dob": "1988-01-01",
+                "drugName": "ENBREL 25 MG MDV W/DIL 4'S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "WRFSVMXIMY",
+                "lastName": "UHOZIRXUCY",
+                "dob": "1976-08-17",
+                "drugName": "COPAXONE 20 MG/ML SYRINGE"
+            },
+            {
+                "firstName": "WRFSVMXIMY",
+                "lastName": "UHOZIRXUCY",
+                "dob": "1976-08-17",
+                "drugName": "COPAXONE 20 MG/ML SYRINGE"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "WRFSVMXIMY",
+                "lastName": "UHOZIRXUCY",
+                "dob": "1976-08-17",
+                "drugName": "COPAXONE 20 MG/ML SYRINGE"
+            },
+            {
+                "firstName": "WRFSVMXIMY",
+                "lastName": "UHOZIRXUCY",
+                "dob": "1976-08-17",
+                "drugName": "COPAXONE 20 MG/ML SYRINGE"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "WRFSVMXIMY",
+                "lastName": "UHOZIRXUCY",
+                "dob": "1976-08-17",
+                "drugName": "COPAXONE 20 MG/ML SYRINGE"
+            },
+            {
+                "firstName": "RODRIGO",
+                "lastName": "ORTEGA",
+                "dob": "1960-10-28",
+                "drugName": "SPRYCEL"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "WRFSVMXIMY",
+                "lastName": "UHOZIRXUCY",
+                "dob": "1976-08-17",
+                "drugName": "COPAXONE 20 MG/ML SYRINGE"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "WRFSVMXIMY",
+                "lastName": "UHOZIRXUCY",
+                "dob": "1976-08-17",
+                "drugName": "COPAXONE 20 MG/ML SYRINGE"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "WRFSVMXIMY",
+                "lastName": "UHOZIRXUCY",
+                "dob": "1976-08-17",
+                "drugName": "COPAXONE 20 MG/ML SYRINGE"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "WRFSVMXIMY",
+                "lastName": "UHOZIRXUCY",
+                "dob": "1976-08-17",
+                "drugName": "COPAXONE 20 MG/ML SYRINGE"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "WRFSVMXIMY",
+                "lastName": "UHOZIRXUCY",
+                "dob": "1976-08-17",
+                "drugName": "COPAXONE 20 MG/ML SYRINGE"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "AL",
+                "lastName": "ADAMS",
+                "dob": "1960-10-28",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "LAYLA",
+                "lastName": "KILGORE",
+                "dob": "1988-01-01",
+                "drugName": "RIBAVIRIN"
+            },
+            {
+                "firstName": "LAYLA",
+                "lastName": "KILGORE",
+                "dob": "1988-01-01",
+                "drugName": "RIBAVIRIN"
+            },
+            {
+                "firstName": "WRFSVMXIMY",
+                "lastName": "UHOZIRXUCY",
+                "dob": "1976-08-17",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "LAYLA",
+                "lastName": "KILGORE",
+                "dob": "1988-01-01",
+                "drugName": "RIBAVIRIN"
+            },
+            {
+                "firstName": "LAYLA",
+                "lastName": "KILGORE",
+                "dob": "1988-01-01",
+                "drugName": "RIBAVIRIN"
+            },
+            {
+                "firstName": "LAYLA",
+                "lastName": "KILGORE",
+                "dob": "1988-01-01",
+                "drugName": "RIBAVIRIN"
+            },
+            {
+                "firstName": "LAYLA",
+                "lastName": "KILGORE",
+                "dob": "1988-01-01",
+                "drugName": "RIBAVIRIN"
+            },
+            {
+                "firstName": "LAYLA",
+                "lastName": "KILGORE",
+                "dob": "1988-01-01",
+                "drugName": "RIBAVIRIN"
+            },
+            {
+                "firstName": "LAYLA",
+                "lastName": "KILGORE",
+                "dob": "1988-01-01",
+                "drugName": "RIBAVIRIN"
+            },
+            {
+                "firstName": "WRFSVMXIMY",
+                "lastName": "UHOZIRXUCY",
+                "dob": "1976-08-17",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "XZDMZOWQLS",
+                "lastName": "EVWIMAJGZH",
+                "dob": "1992-06-03",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "LAYLA",
+                "lastName": "KILGORE",
+                "dob": "1988-01-01",
+                "drugName": "RIBAVIRIN"
+            },
+            {
+                "firstName": "XZDMZOWQLS",
+                "lastName": "EVWIMAJGZH",
+                "dob": "1992-06-03",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "LAYLA",
+                "lastName": "KILGORE",
+                "dob": "1988-01-01",
+                "drugName": "RIBAVIRIN"
+            },
+            {
+                "firstName": "XZDMZOWQLS",
+                "lastName": "EVWIMAJGZH",
+                "dob": "1992-06-03",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "LAYLA",
+                "lastName": "KILGORE",
+                "dob": "1988-01-01",
+                "drugName": "RIBAVIRIN"
+            },
+            {
+                "firstName": "LAYLA",
+                "lastName": "KILGORE",
+                "dob": "1988-01-01",
+                "drugName": "RIBAVIRIN"
+            },
+            {
+                "firstName": "WRFSVMXIMY",
+                "lastName": "UHOZIRXUCY",
+                "dob": "1976-08-17",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "LAYLA",
+                "lastName": "KILGORE",
+                "dob": "1988-01-01",
+                "drugName": "RIBAVIRIN"
+            },
+            {
+                "firstName": "WRFSVMXIMY",
+                "lastName": "UHOZIRXUCY",
+                "dob": "1976-08-17",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "LAYLA",
+                "lastName": "KILGORE",
+                "dob": "1988-01-01",
+                "drugName": "RIBAVIRIN"
+            },
+            {
+                "firstName": "WRFSVMXIMY",
+                "lastName": "UHOZIRXUCY",
+                "dob": "1976-08-17",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "WRFSVMXIMY",
+                "lastName": "UHOZIRXUCY",
+                "dob": "1976-08-17",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "XZDMZOWQLS",
+                "lastName": "EVWIMAJGZH",
+                "dob": "1992-06-03",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "WRFSVMXIMY",
+                "lastName": "UHOZIRXUCY",
+                "dob": "1976-08-17",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "WRFSVMXIMY",
+                "lastName": "UHOZIRXUCY",
+                "dob": "1976-08-17",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "LAYLA",
+                "lastName": "KILGORE",
+                "dob": "1988-01-01",
+                "drugName": "RIBAVIRIN"
+            },
+            {
+                "firstName": "LAYLA",
+                "lastName": "KILGORE",
+                "dob": "1988-01-01",
+                "drugName": "RIBAVIRIN"
+            },
+            {
+                "firstName": "LAYLA",
+                "lastName": "KILGORE",
+                "dob": "1988-01-01",
+                "drugName": "RIBAVIRIN"
+            },
+            {
+                "firstName": "LAYLA",
+                "lastName": "KILGORE",
+                "dob": "1988-01-01",
+                "drugName": "RIBAVIRIN"
+            },
+            {
+                "firstName": "XZDMZOWQLS",
+                "lastName": "EVWIMAJGZH",
+                "dob": "1992-06-03",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "LAYLA",
+                "lastName": "KILGORE",
+                "dob": "1988-01-01",
+                "drugName": "RIBAVIRIN"
+            },
+            {
+                "firstName": "XZDMZOWQLS",
+                "lastName": "EVWIMAJGZH",
+                "dob": "1992-06-03",
+                "drugName": "COPAXONE PREFLD 1ML SYR 30 S"
+            },
+            {
+                "firstName": "LAYLA",
+                "lastName": "KILGORE",
+                "dob": "1988-01-01",
+                "drugName": "RIBAVIRIN"
+            },
+            {
+                "firstName": "LAYLA",
+                "lastName": "KILGORE",
+                "dob": "1988-01-01",
+                "drugName": "ENBREL 50 MG/ML MINI CARTRIDGE"
+            },
+            {
+                "firstName": "LAYLA",
+                "lastName": "KILGORE",
+                "dob": "1988-01-01",
+                "drugName": "ENBREL 50 MG/ML MINI CARTRIDGE"
+            },
+            {
+                "firstName": "LAYLA",
+                "lastName": "KILGORE",
+                "dob": "1988-01-01",
+                "drugName": "ENBREL 50 MG/ML MINI CARTRIDGE"
+            },
+            {
+                "firstName": "LAYLA",
+                "lastName": "KILGORE",
+                "dob": "1988-01-01",
+                "drugName": "ENBREL 50 MG/ML MINI CARTRIDGE"
+            },
+            {
+                "firstName": "LAYLA",
+                "lastName": "KILGORE",
+                "dob": "1988-01-01",
+                "drugName": "ENBREL 50 MG/ML MINI CARTRIDGE"
+            },
+            {
+                "firstName": "LAYLA",
+                "lastName": "KILGORE",
+                "dob": "1988-01-01",
+                "drugName": "ENBREL 50 MG/ML MINI CARTRIDGE"
+            },
+            {
+                "firstName": "LAYLA",
+                "lastName": "KILGORE",
+                "dob": "1988-01-01",
+                "drugName": "ENBREL 50 MG/ML MINI CARTRIDGE"
+            },
+            {
+                "firstName": "LAYLA",
+                "lastName": "KILGORE",
+                "dob": "1988-01-01",
+                "drugName": "ENBREL 50 MG/ML MINI CARTRIDGE"
+            },
+            {
+                "firstName": "LAYLA",
+                "lastName": "KILGORE",
+                "dob": "1988-01-01",
+                "drugName": "ENBREL 50 MG/ML MINI CARTRIDGE"
+            },
+            {
+                "firstName": "LAYLA",
+                "lastName": "KILGORE",
+                "dob": "1988-01-01",
+                "drugName": "ENBREL 50 MG/ML MINI CARTRIDGE"
+            },
+            {
+                "firstName": "LAYLA",
+                "lastName": "KILGORE",
+                "dob": "1988-01-01",
+                "drugName": "ENBREL 50 MG/ML MINI CARTRIDGE"
+            }
+        ]
+    }
+}
