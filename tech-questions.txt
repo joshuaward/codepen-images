@@ -1,0 +1,96 @@
+Interview Questions
+These are some [technical] interview questions for potential candidates to gauge where they stand in experience regarding React, Figma, and UX/UI design in general. The questions are separated out into easy, medium, and hard categories. The bullet points below them are what we are looking for in a candidate’s answers. While they may not be exactly how the candidate gives an answer, they give a general idea of what we expect to hear.
+
+React
+Easy:
+1.	What is JSX?
+•	JSX stands for JavaScript XML, and it is an XML-like syntax extension to ECMAScript. Basically, it just provides the syntactic sugar for the React.createElement(type, props, ...children) function, giving us expressiveness of JavaScript along with HTML like template syntax.
+
+2.	How do you create components in React?
+•	Components are the building blocks of creating User Interfaces (UI) in React. There are two possible ways to create a component.
+-	Functional Components
+-	Class Components
+
+3.	What is state in React?
+•	State of a component is an object that holds some information that may change over the lifetime of the component. The important point is whenever the state object changes, the component re-renders. It is always recommended to make our state as simple as possible and minimize the number of stateful components.
+
+4.	What are props in React?
+•	Props are inputs to components. They are single values or objects containing a set of values that are passed to components on creation, similar to HTML-tag attributes. Here, the data is passed down from a parent component to a child component.
+•	The primary purpose of props in React is to provide following component functionality:
+-	Pass custom data to your component.
+-	Trigger state changes.
+-	Use via this.props.reactProp inside component's render() method.
+
+5.	Why should component names start with a capital letter?
+•	If you are rendering your component using JSX, the name of that component must begin with a capital letter otherwise React will throw an error as an unrecognized tag. This convention is because only HTML elements and SVG tags can begin with a lowercase letter.
+
+Medium:
+1.	When would you use a Class Component over a Functional Component?
+•	After the addition of Hooks (i.e. React 16.8 onwards) it is always recommended to use Function components over Class components in React. Because you could use state, lifecycle methods and other features that were only available in class component present in function component too.
+-	Functional Components
+▪︎	If you don't need state or lifecycle methods, and your component is purely presentational.
+▪︎	For simplicity, readability, and modern code practices, especially with the use of React Hooks for state and side effects.
+-	Class Components
+▪︎	If you need to manage state or use lifecycle methods.
+▪︎	In scenarios where backward compatibility or integration with older code is necessary.
+
+2.	What are controlled components?
+•	A component that controls the input elements within the forms on subsequent user input is called Controlled Component, i.e., every state mutation will have an associated handler function. That means, the displayed data is always in sync with the state of the component.
+
+3.	Why are fragments better than container divs?
+•	Fragments are a bit faster and use less memory by not creating an extra DOM node. This only has a real benefit on very large and deep trees.
+•	Some CSS mechanisms like Flexbox and CSS Grid have a special parent-child relationships, and adding divs in the middle makes it hard to keep the desired layout.
+•	The DOM Inspector is less cluttered.
+
+4.	What is context?
+•	Context provides a way to pass data through the component tree without having to pass props down manually at every level.
+
+
+Hard:
+1.	What are Higher-Order Components?
+•	A higher-order component (HOC) is a function that takes a component and returns a new component. Basically, it's a pattern that is derived from React's compositional nature.
+•	We call them pure components because they can accept any dynamically provided child component, but they won't modify or copy any behavior from their input components.
+
+2.	How do you apply validation on props in React?
+•	When the application is running in development mode, React will automatically check all props that we set on components to make sure they have the correct type. If the type is incorrect, React will generate warning messages in the console. It's disabled in production mode due to performance impact. The mandatory props are defined with isRequired.
+
+3.	What is Virtual DOM?
+•	The Virtual DOM (VDOM) is an in-memory representation of Real DOM. The representation of a UI is kept in memory and synced with the "real" DOM. It's a step that happens between the render function being called and the displaying of elements on the screen. This entire process is called reconciliation.
+
+
+Figma
+Easy:
+1.	How do you create a new design file in Figma?
+•	To create a new design file in Figma, go to the dashboard, click “New File,” select the canvas size, and then click “Create.”
+2.	What are artboards in Figma?
+•	Artboards are containers that hold design elements. They define the canvas area for your design and help you organize your work.
+3.	How do you keep your Figma artboards organized?
+Medium:
+1.	How do you share a Figma design with a client for feedback?
+•	You can share a Figma design by generating a shareable link with viewing or commenting permissions. Clients can view the design in their web browser and leave feedback directly in Figma.
+2.	Explain the difference between frames and artboards in Figma.
+•	Frames are versatile containers that can hold content and be resized, while artboards are fixed-sized containers primarily used for exporting assets at specific dimensions.
+
+Hard:
+1.	What is auto layout in Figma and when should you use it?
+•	Auto Layout is a feature in Figma that automatically arranges and resizes elements based on their content. It’s useful for creating dynamic and responsive designs, such as lists and navigation bars.
+
+
+UX/UI 
+
+General:
+1.	What is UX design to you?
+•	UX design is all about championing the user. Consider discussing how empathy and user-centered design create value.
+2.	Tell me about some of your favorite examples of good UX.
+3.	What is the difference between UX and UI?
+•	While UI and UX are sometimes used interchangeably (or lumped together), they represent distinct roles in the product development process. Ensure you can communicate the difference between a product looking good (UI) and work effectively and efficiently (UX). 
+4.	Where do you find inspiration?
+5.	What is your design process? Walk me through your workflow.
+•	This question is all about analyzing your critical thinking and problem-solving skills. Look for a successful project they’ve worked on and have them walk through the steps taken. Look for mentions of research, design, and validation of design decisions.
+6.	What kind of research methods do you use?
+•	User research is a key part of the UX design process
+•	Benefits and limitations of each method
+7.	How do you respond to negative feedback?
+•	When a client says, “I don’t like this design,” what do you do?
+8.	How would you improve the UX of our product?
+
