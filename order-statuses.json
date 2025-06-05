@@ -378,5 +378,385 @@
 			}
 		},
 		"rxNumber": "11211136"
+	},
+	{
+		"patientId": "11223344",
+		"prescribedItems": [
+			{
+				"brandName": "ENBREL",
+				"directions": "TESTING",
+				"dose": "1",
+				"drugIdentifiers": {
+					"gcn": "48417",
+					"ndc": "58406-0055-04"
+				},
+				"genericName": "ETANERCEPT",
+				"name": "ENBREL 25 MG/0.5 ML VIAL",
+				"packageMetricSizeQuantity": "2.0000",
+				"strength": "25MG/0.5ML"
+			}
+		],
+		"prescriber": {
+			"name": {
+				"first": "ALEXANDER",
+				"last": "GOTESMAN"
+			},
+			"npi": "1003002072",
+			"phoneNumber": "609-581-5900",
+			"postalAddress": {
+				"city": "HAMILTON",
+				"postalCode": "08690-0000",
+				"state": {
+					"code": "NJ"
+				},
+				"streetAddress": [
+					"1374 WHITEHORSE HAMI",
+					null
+				]
+			}
+		},
+		"rxNumber": "11211137"
+	},
+	{
+		"patientId": "22334455",
+		"prescribedItems": [
+			{
+				"brandName": "ENBREL",
+				"directions": "TESTING",
+				"dose": "1",
+				"drugIdentifiers": {
+					"gcn": "48417",
+					"ndc": "58406-0055-04"
+				},
+				"genericName": "ETANERCEPT",
+				"name": "ENBREL 25 MG/0.5 ML VIAL",
+				"packageMetricSizeQuantity": "2.0000",
+				"strength": "25MG/0.5ML"
+			}
+		],
+		"prescriber": {
+			"name": {
+				"first": "ALEXANDER",
+				"last": "GOTESMAN"
+			},
+			"npi": "1003002072",
+			"phoneNumber": "609-581-5900",
+			"postalAddress": {
+				"city": "HAMILTON",
+				"postalCode": "08690-0000",
+				"state": {
+					"code": "NJ"
+				},
+				"streetAddress": [
+					"1374 WHITEHORSE HAMI",
+					null
+				]
+			}
+		},
+		"rxNumber": "11211138"
+	},
+	{
+		"patientId": "33445566",
+		"prescribedItems": [
+			{
+				"brandName": "ENBREL",
+				"directions": "TESTING",
+				"dose": "1",
+				"drugIdentifiers": {
+					"gcn": "48417",
+					"ndc": "58406-0055-04"
+				},
+				"genericName": "ETANERCEPT",
+				"name": "ENBREL 25 MG/0.5 ML VIAL",
+				"packageMetricSizeQuantity": "2.0000",
+				"strength": "25MG/0.5ML"
+			}
+		],
+		"prescriber": {
+			"name": {
+				"first": "ALEXANDER",
+				"last": "GOTESMAN"
+			},
+			"npi": "1003002072",
+			"phoneNumber": "609-581-5900",
+			"postalAddress": {
+				"city": "HAMILTON",
+				"postalCode": "08690-0000",
+				"state": {
+					"code": "NJ"
+				},
+				"streetAddress": [
+					"1374 WHITEHORSE HAMI",
+					null
+				]
+			}
+		},
+		"rxNumber": "11211139"
+	},
+	{
+		"patientId": "44556677",
+		"prescribedItems": [
+			{
+				"brandName": "ENBREL",
+				"directions": "TESTING",
+				"dose": "1",
+				"drugIdentifiers": {
+					"gcn": "48417",
+					"ndc": "58406-0055-04"
+				},
+				"genericName": "ETANERCEPT",
+				"name": "ENBREL 25 MG/0.5 ML VIAL",
+				"packageMetricSizeQuantity": "2.0000",
+				"strength": "25MG/0.5ML"
+			}
+		],
+		"prescriber": {
+			"name": {
+				"first": "ALEXANDER",
+				"last": "GOTESMAN"
+			},
+			"npi": "1003002072",
+			"phoneNumber": "609-581-5900",
+			"postalAddress": {
+				"city": "HAMILTON",
+				"postalCode": "08690-0000",
+				"state": {
+					"code": "NJ"
+				},
+				"streetAddress": [
+					"1374 WHITEHORSE HAMI",
+					null
+				]
+			}
+		},
+		"rxNumber": "11211140"
+	},
+	{
+		"patientId": "55667788",
+		"prescribedItems": [
+			{
+				"brandName": "ENBREL",
+				"directions": "TESTING",
+				"dose": "1",
+				"drugIdentifiers": {
+					"gcn": "48417",
+					"ndc": "58406-0055-04"
+				},
+				"genericName": "ETANERCEPT",
+				"name": "ENBREL 25 MG/0.5 ML VIAL",
+				"packageMetricSizeQuantity": "2.0000",
+				"strength": "25MG/0.5ML"
+			}
+		],
+		"prescriber": {
+			"name": {
+				"first": "ALEXANDER",
+				"last": "GOTESMAN"
+			},
+			"npi": "1003002072",
+			"phoneNumber": "609-581-5900",
+			"postalAddress": {
+				"city": "HAMILTON",
+				"postalCode": "08690-0000",
+				"state": {
+					"code": "NJ"
+				},
+				"streetAddress": [
+					"1374 WHITEHORSE HAMI",
+					null
+				]
+			}
+		},
+		"rxNumber": "11211141"
+	},
+	{
+		"patientId": "66778899",
+		"prescribedItems": [
+			{
+				"brandName": "ENBREL",
+				"directions": "TESTING",
+				"dose": "1",
+				"drugIdentifiers": {
+					"gcn": "48417",
+					"ndc": "58406-0055-04"
+				},
+				"genericName": "ETANERCEPT",
+				"name": "ENBREL 25 MG/0.5 ML VIAL",
+				"packageMetricSizeQuantity": "2.0000",
+				"strength": "25MG/0.5ML"
+			}
+		],
+		"prescriber": {
+			"name": {
+				"first": "ALEXANDER",
+				"last": "GOTESMAN"
+			},
+			"npi": "1003002072",
+			"phoneNumber": "609-581-5900",
+			"postalAddress": {
+				"city": "HAMILTON",
+				"postalCode": "08690-0000",
+				"state": {
+					"code": "NJ"
+				},
+				"streetAddress": [
+					"1374 WHITEHORSE HAMI",
+					null
+				]
+			}
+		},
+		"rxNumber": "11211142"
+	},
+	{
+		"patientId": "77889900",
+		"prescribedItems": [
+			{
+				"brandName": "ENBREL",
+				"directions": "TESTING",
+				"dose": "1",
+				"drugIdentifiers": {
+					"gcn": "48417",
+					"ndc": "58406-0055-04"
+				},
+				"genericName": "ETANERCEPT",
+				"name": "ENBREL 25 MG/0.5 ML VIAL",
+				"packageMetricSizeQuantity": "2.0000",
+				"strength": "25MG/0.5ML"
+			}
+		],
+		"prescriber": {
+			"name": {
+				"first": "ALEXANDER",
+				"last": "GOTESMAN"
+			},
+			"npi": "1003002072",
+			"phoneNumber": "609-581-5900",
+			"postalAddress": {
+				"city": "HAMILTON",
+				"postalCode": "08690-0000",
+				"state": {
+					"code": "NJ"
+				},
+				"streetAddress": [
+					"1374 WHITEHORSE HAMI",
+					null
+				]
+			}
+		},
+		"rxNumber": "11211143"
+	},
+	{
+		"patientId": "88990011",
+		"prescribedItems": [
+			{
+				"brandName": "ENBREL",
+				"directions": "TESTING",
+				"dose": "1",
+				"drugIdentifiers": {
+					"gcn": "48417",
+					"ndc": "58406-0055-04"
+				},
+				"genericName": "ETANERCEPT",
+				"name": "ENBREL 25 MG/0.5 ML VIAL",
+				"packageMetricSizeQuantity": "2.0000",
+				"strength": "25MG/0.5ML"
+			}
+		],
+		"prescriber": {
+			"name": {
+				"first": "ALEXANDER",
+				"last": "GOTESMAN"
+			},
+			"npi": "1003002072",
+			"phoneNumber": "609-581-5900",
+			"postalAddress": {
+				"city": "HAMILTON",
+				"postalCode": "08690-0000",
+				"state": {
+					"code": "NJ"
+				},
+				"streetAddress": [
+					"1374 WHITEHORSE HAMI",
+					null
+				]
+			}
+		},
+		"rxNumber": "11211144"
+	},
+	{
+		"patientId": "99001122",
+		"prescribedItems": [
+			{
+				"brandName": "ENBREL",
+				"directions": "TESTING",
+				"dose": "1",
+				"drugIdentifiers": {
+					"gcn": "48417",
+					"ndc": "58406-0055-04"
+				},
+				"genericName": "ETANERCEPT",
+				"name": "ENBREL 25 MG/0.5 ML VIAL",
+				"packageMetricSizeQuantity": "2.0000",
+				"strength": "25MG/0.5ML"
+			}
+		],
+		"prescriber": {
+			"name": {
+				"first": "ALEXANDER",
+				"last": "GOTESMAN"
+			},
+			"npi": "1003002072",
+			"phoneNumber": "609-581-5900",
+			"postalAddress": {
+				"city": "HAMILTON",
+				"postalCode": "08690-0000",
+				"state": {
+					"code": "NJ"
+				},
+				"streetAddress": [
+					"1374 WHITEHORSE HAMI",
+					null
+				]
+			}
+		},
+		"rxNumber": "11211145"
+	},
+	{
+		"patientId": "10111213",
+		"prescribedItems": [
+			{
+				"brandName": "ENBREL",
+				"directions": "TESTING",
+				"dose": "1",
+				"drugIdentifiers": {
+					"gcn": "48417",
+					"ndc": "58406-0055-04"
+				},
+				"genericName": "ETANERCEPT",
+				"name": "ENBREL 25 MG/0.5 ML VIAL",
+				"packageMetricSizeQuantity": "2.0000",
+				"strength": "25MG/0.5ML"
+			}
+		],
+		"prescriber": {
+			"name": {
+				"first": "ALEXANDER",
+				"last": "GOTESMAN"
+			},
+			"npi": "1003002072",
+			"phoneNumber": "609-581-5900",
+			"postalAddress": {
+				"city": "HAMILTON",
+				"postalCode": "08690-0000",
+				"state": {
+					"code": "NJ"
+				},
+				"streetAddress": [
+					"1374 WHITEHORSE HAMI",
+					null
+				]
+			}
+		},
+		"rxNumber": "11211146"
 	}
 ]
