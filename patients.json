@@ -68,5 +68,75 @@
 		"PATIENT_GENDER": "M",
 		"PATIENT_ID": "13579246",
 		"PATIENT_NAME": "Hernandez, William"
+	},
+	{
+		"NPI": "1003002072",
+		"PATIENT_DOB": "1982-06-12",
+		"PATIENT_GENDER": "M",
+		"PATIENT_ID": "11223344",
+		"PATIENT_NAME": "Clark, Thomas"
+	},
+	{
+		"NPI": "1003002072",
+		"PATIENT_DOB": "1990-10-03",
+		"PATIENT_GENDER": "F",
+		"PATIENT_ID": "22334455",
+		"PATIENT_NAME": "Lewis, Sarah"
+	},
+	{
+		"NPI": "1003002072",
+		"PATIENT_DOB": "1971-12-25",
+		"PATIENT_GENDER": "M",
+		"PATIENT_ID": "33445566",
+		"PATIENT_NAME": "Walker, Brian"
+	},
+	{
+		"NPI": "1003002072",
+		"PATIENT_DOB": "1987-09-14",
+		"PATIENT_GENDER": "F",
+		"PATIENT_ID": "44556677",
+		"PATIENT_NAME": "Hall, Jessica"
+	},
+	{
+		"NPI": "1003002072",
+		"PATIENT_DOB": "2002-03-08",
+		"PATIENT_GENDER": "M",
+		"PATIENT_ID": "55667788",
+		"PATIENT_NAME": "Allen, Christopher"
+	},
+	{
+		"NPI": "1003002072",
+		"PATIENT_DOB": "1965-07-19",
+		"PATIENT_GENDER": "F",
+		"PATIENT_ID": "66778899",
+		"PATIENT_NAME": "Young, Karen"
+	},
+	{
+		"NPI": "1003002072",
+		"PATIENT_DOB": "1998-11-30",
+		"PATIENT_GENDER": "M",
+		"PATIENT_ID": "77889900",
+		"PATIENT_NAME": "King, Matthew"
+	},
+	{
+		"NPI": "1003002072",
+		"PATIENT_DOB": "1976-05-21",
+		"PATIENT_GENDER": "F",
+		"PATIENT_ID": "88990011",
+		"PATIENT_NAME": "Wright, Laura"
+	},
+	{
+		"NPI": "1003002072",
+		"PATIENT_DOB": "1984-08-15",
+		"PATIENT_GENDER": "M",
+		"PATIENT_ID": "99001122",
+		"PATIENT_NAME": "Scott, Daniel"
+	},
+	{
+		"NPI": "1003002072",
+		"PATIENT_DOB": "1993-02-27",
+		"PATIENT_GENDER": "F",
+		"PATIENT_ID": "10111213",
+		"PATIENT_NAME": "Green, Megan"
 	}
 ]
