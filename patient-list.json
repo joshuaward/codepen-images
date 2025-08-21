@@ -1,0 +1,302 @@
+[
+	{
+		"npi": "1366452203",
+		"patientDob": "01/02/1958",
+		"patientGender": "M",
+		"patientId": "16616290",
+		"patientName": "Greenberg, Suzy",
+		"membershipId": null,
+		"pa": null,
+		"ha37": false
+	},
+	{
+		"npi": "1366452203",
+		"patientDob": "10/07/1957",
+		"patientGender": "M",
+		"patientId": "16535910",
+		"patientName": "Johnson, Michael",
+		"membershipId": null,
+		"pa": null,
+		"ha37": false
+	},
+	{
+		"npi": "1366452203",
+		"patientDob": "10/07/1957",
+		"patientGender": "M",
+		"patientId": "16535912",
+		"patientName": "Williams, David",
+		"membershipId": null,
+		"pa": null,
+		"ha37": false
+	},
+	{
+		"npi": "1366452203",
+		"patientDob": "01/01/1999",
+		"patientGender": "M",
+		"patientId": "16408303",
+		"patientName": "Brown, James",
+		"membershipId": null,
+		"pa": null,
+		"ha37": false
+	},
+	{
+		"npi": "1366452203",
+		"patientDob": "10/29/1983",
+		"patientGender": "M",
+		"patientId": "16554019",
+		"patientName": "Jones, Robert",
+		"membershipId": null,
+		"pa": null,
+		"ha37": false
+	},
+	{
+		"npi": "1366452203",
+		"patientDob": "10/07/1957",
+		"patientGender": "M",
+		"patientId": "16535909",
+		"patientName": "Garcia, William",
+		"membershipId": null,
+		"pa": null,
+		"ha37": false
+	},
+	{
+		"npi": "1366452203",
+		"patientDob": "01/05/1958",
+		"patientGender": "M",
+		"patientId": "16780693",
+		"patientName": "Miller, Charles",
+		"membershipId": null,
+		"pa": null,
+		"ha37": false
+	},
+	{
+		"npi": "1366452203",
+		"patientDob": "01/05/1958",
+		"patientGender": "M",
+		"patientId": "16780443",
+		"patientName": "Davis, Joseph",
+		"membershipId": null,
+		"pa": null,
+		"ha37": false
+	},
+	{
+		"npi": "1366452203",
+		"patientDob": "01/04/1958",
+		"patientGender": "M",
+		"patientId": "16634233",
+		"patientName": "Rodriguez, Thomas",
+		"membershipId": null,
+		"pa": null,
+		"ha37": false
+	},
+	{
+		"npi": "1366452203",
+		"patientDob": "01/04/1958",
+		"patientGender": "M",
+		"patientId": "16635264",
+		"patientName": "Martinez, Christopher",
+		"membershipId": null,
+		"pa": null,
+		"ha37": false
+	},
+	{
+		"npi": "1366452203",
+		"patientDob": "01/01/1928",
+		"patientGender": "F",
+		"patientId": "16433872",
+		"patientName": "Hernandez, Mary",
+		"membershipId": null,
+		"pa": null,
+		"ha37": false
+	},
+	{
+		"npi": "1366452203",
+		"patientDob": "01/08/1958",
+		"patientGender": "M",
+		"patientId": "16857417",
+		"patientName": "Lopez, Daniel",
+		"membershipId": null,
+		"pa": null,
+		"ha37": false
+	},
+	{
+		"npi": "1366452203",
+		"patientDob": "10/11/1957",
+		"patientGender": "M",
+		"patientId": "16579088",
+		"patientName": "Gonzalez, Matthew",
+		"membershipId": null,
+		"pa": null,
+		"ha37": false
+	},
+	{
+		"npi": "1366452203",
+		"patientDob": "01/08/1958",
+		"patientGender": "M",
+		"patientId": "16857421",
+		"patientName": "Wilson, Anthony",
+		"membershipId": null,
+		"pa": null,
+		"ha37": false
+	},
+	{
+		"npi": "1366452203",
+		"patientDob": "01/04/1958",
+		"patientGender": "M",
+		"patientId": "16634276",
+		"patientName": "Anderson, Mark",
+		"membershipId": null,
+		"pa": null,
+		"ha37": false
+	},
+	{
+		"npi": "1366452203",
+		"patientDob": "01/02/1958",
+		"patientGender": "M",
+		"patientId": "16616351",
+		"patientName": "Thomas, Donald",
+		"membershipId": null,
+		"pa": null,
+		"ha37": false
+	},
+	{
+		"npi": "1366452203",
+		"patientDob": "10/07/1957",
+		"patientGender": "M",
+		"patientId": "16535908",
+		"patientName": "Taylor, Paul",
+		"membershipId": null,
+		"pa": null,
+		"ha37": false
+	},
+	{
+		"npi": "1366452203",
+		"patientDob": "09/30/1989",
+		"patientGender": "F",
+		"patientId": "16567085",
+		"patientName": "Moore, Jennifer",
+		"membershipId": null,
+		"pa": null,
+		"ha37": false
+	},
+	{
+		"npi": "1366452203",
+		"patientDob": "01/07/1958",
+		"patientGender": "M",
+		"patientId": "16815569",
+		"patientName": "Jackson, Steven",
+		"membershipId": null,
+		"pa": null,
+		"ha37": false
+	},
+	{
+		"npi": "1366452203",
+		"patientDob": "01/07/1958",
+		"patientGender": "M",
+		"patientId": "16814959",
+		"patientName": "Martin, Andrew",
+		"membershipId": null,
+		"pa": null,
+		"ha37": false
+	},
+	{
+		"npi": "1366452203",
+		"patientDob": "01/07/1958",
+		"patientGender": "M",
+		"patientId": "16815059",
+		"patientName": "Lee, Joshua",
+		"membershipId": null,
+		"pa": null,
+		"ha37": false
+	},
+	{
+		"npi": "1366452203",
+		"patientDob": "01/04/1958",
+		"patientGender": "M",
+		"patientId": "16634277",
+		"patientName": "Perez, Kevin",
+		"membershipId": null,
+		"pa": null,
+		"ha37": false
+	},
+	{
+		"npi": "1366452203",
+		"patientDob": "01/04/1958",
+		"patientGender": "M",
+		"patientId": "16634401",
+		"patientName": "Thompson, Brian",
+		"membershipId": null,
+		"pa": null,
+		"ha37": false
+	},
+	{
+		"npi": "1366452203",
+		"patientDob": "12/19/1980",
+		"patientGender": "M",
+		"patientId": "16377743",
+		"patientName": "White, Jason",
+		"membershipId": null,
+		"pa": null,
+		"ha37": false
+	},
+	{
+		"npi": "1366452203",
+		"patientDob": "01/04/1958",
+		"patientGender": "M",
+		"patientId": "16634398",
+		"patientName": "Harris, Eric",
+		"membershipId": null,
+		"pa": null,
+		"ha37": false
+	},
+	{
+		"npi": "1366452203",
+		"patientDob": "10/09/1957",
+		"patientGender": "M",
+		"patientId": "16542863",
+		"patientName": "Sanchez, Ryan",
+		"membershipId": null,
+		"pa": null,
+		"ha37": false
+	},
+	{
+		"npi": "1366452203",
+		"patientDob": "06/02/1984",
+		"patientGender": "M",
+		"patientId": "16361406",
+		"patientName": "Clark, Gary",
+		"membershipId": null,
+		"pa": null,
+		"ha37": false
+	},
+	{
+		"npi": "1366452203",
+		"patientDob": "03/31/1980",
+		"patientGender": "M",
+		"patientId": "16555002",
+		"patientName": "Ramirez, Timothy",
+		"membershipId": null,
+		"pa": null,
+		"ha37": false
+	},
+	{
+		"npi": "1366452203",
+		"patientDob": "09/04/1992",
+		"patientGender": "M",
+		"patientId": "16436666",
+		"patientName": "Lewis, Patrick",
+		"membershipId": null,
+		"pa": null,
+		"ha37": false
+	},
+	{
+		"npi": "1366452203",
+		"patientDob": "01/01/1956",
+		"patientGender": "M",
+		"patientId": "16447672",
+		"patientName": "Robinson, Kenneth",
+		"membershipId": null,
+		"pa": null,
+		"ha37": false
+	}
+]
