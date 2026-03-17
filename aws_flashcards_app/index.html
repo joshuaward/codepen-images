@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AWS AI Practitioner — Flashcards</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg:       #0d0f14;
+    --surface:  #13161e;
+    --panel:    #1a1e2a;
+    --border:   #2a2f3d;
+    --border2:  #363d50;
+    --text:     #e8ecf4;
+    --muted:    #7c849a;
+    --dim:      #4a5166;
+    --accent:   #4f9cf9;
+    --accent2:  #7b61ff;
+    --green:    #34d399;
+    --amber:    #fbbf24;
+    --red:      #f87171;
+    --d1:       #4f9cf9;
+    --d2:       #a78bfa;
+    --d3:       #34d399;
+    --d4:       #fbbf24;
+    --d5:       #fb7185;
+    --tips:     #94a3b8;
+    --mono:     'IBM Plex Mono', monospace;
+    --sans:     'IBM Plex Sans', sans-serif;
+    --radius:   12px;
+    --card-h:   340px;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body, #root { height: 100%; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    font-size: 15px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── Layout ── */
+  .app { display: flex; flex-direction: column; min-height: 100vh; }
+
+  /* ── Header ── */
+  .header {
+    padding: 18px 32px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    background: var(--surface);
+  }
+  .logo {
+    display: flex; align-items: center; gap: 10px;
+    font-family: var(--mono); font-size: 13px; font-weight: 500;
+    color: var(--muted); letter-spacing: 0.05em;
+  }
+  .logo-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  .logo span { color: var(--text); }
+  .header-stats {
+    display: flex; gap: 20px; flex-wrap: wrap;
+  }
+  .stat {
+    font-family: var(--mono); font-size: 12px; color: var(--muted);
+    display: flex; align-items: center; gap: 6px;
+  }
+  .stat-val { color: var(--text); font-weight: 600; }
+  .stat-val.green { color: var(--green); }
+  .stat-val.amber { color: var(--amber); }
+  .stat-val.red   { color: var(--red); }
+
+  /* ── Domain Filter ── */
+  .filter-bar {
+    padding: 14px 32px;
+    border-bottom: 1px solid var(--border);
+    display: flex; gap: 8px; flex-wrap: wrap; align-items: center;
+    background: var(--surface);
+  }
+  .filter-label { font-family: var(--mono); font-size: 11px; color: var(--dim); margin-right: 4px; letter-spacing: 0.08em; text-transform: uppercase; }
+  .chip {
+    font-family: var(--mono); font-size: 11px; font-weight: 500;
+    padding: 5px 12px; border-radius: 20px;
+    border: 1px solid var(--border2);
+    background: transparent; color: var(--muted);
+    cursor: pointer; transition: all 0.15s; white-space: nowrap;
+  }
+  .chip:hover { border-color: var(--border2); color: var(--text); background: var(--panel); }
+  .chip.active { color: #fff; border-color: transparent; }
+  .chip.d0.active  { background: var(--accent); }
+  .chip.d1.active  { background: var(--d1); }
+  .chip.d2.active  { background: var(--d2); }
+  .chip.d3.active  { background: #0f7a55; color: #d1fae5; }
+  .chip.d4.active  { background: #92400e; color: #fef3c7; }
+  .chip.d5.active  { background: #9f1239; color: #fce7f3; }
+  .chip.dtips.active { background: #334155; color: #e2e8f0; }
+
+  /* ── Main ── */
+  .main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 24px;
+    gap: 24px;
+  }
+
+  /* ── Progress ── */
+  .progress-row {
+    width: 100%; max-width: 680px;
+    display: flex; align-items: center; gap: 14px;
+  }
+  .progress-track {
+    flex: 1; height: 3px; background: var(--border);
+    border-radius: 2px; overflow: hidden;
+  }
+  .progress-fill {
+    height: 100%; border-radius: 2px;
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+    transition: width 0.4s ease;
+  }
+  .progress-label { font-family: var(--mono); font-size: 12px; color: var(--muted); white-space: nowrap; }
+
+  /* ── Card ── */
+  .card-scene {
+    width: 100%; max-width: 680px;
+    perspective: 1200px;
+    cursor: pointer;
+  }
+  .card-inner {
+    position: relative;
+    width: 100%; height: var(--card-h);
+    transform-style: preserve-3d;
+    transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .card-inner.flipped { transform: rotateY(180deg); }
+
+  .card-face {
+    position: absolute; inset: 0;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    background: var(--surface);
+    display: flex; flex-direction: column;
+    overflow: hidden;
+  }
+  .card-face.back { transform: rotateY(180deg); }
+
+  .card-header {
+    padding: 14px 20px;
+    border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .domain-tag {
+    font-family: var(--mono); font-size: 10px; font-weight: 600;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 3px 10px; border-radius: 10px;
+  }
+  .face-label {
+    font-family: var(--mono); font-size: 11px; color: var(--dim);
+    letter-spacing: 0.1em; text-transform: uppercase;
+  }
+  .card-body {
+    flex: 1; display: flex; align-items: center; justify-content: center;
+    padding: 28px 32px; text-align: center;
+  }
+  .card-front .card-body { padding: 28px 40px; }
+  .question-text {
+    font-size: 20px; font-weight: 500; line-height: 1.5;
+    color: var(--text); letter-spacing: -0.01em;
+  }
+  .answer-text {
+    font-size: 15px; font-weight: 400; line-height: 1.75;
+    color: var(--text);
+  }
+  .card-hint {
+    padding: 10px 20px;
+    border-top: 1px solid var(--border);
+    font-family: var(--mono); font-size: 11px; color: var(--dim);
+    text-align: center; letter-spacing: 0.05em;
+  }
+
+  /* ── Controls ── */
+  .controls {
+    width: 100%; max-width: 680px;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 12px;
+  }
+  .btn-group { display: flex; gap: 8px; }
+  .btn {
+    font-family: var(--mono); font-size: 12px; font-weight: 500;
+    padding: 9px 18px; border-radius: 8px;
+    border: 1px solid var(--border2); background: var(--panel);
+    color: var(--muted); cursor: pointer;
+    transition: all 0.15s; letter-spacing: 0.04em;
+    display: flex; align-items: center; gap: 7px;
+  }
+  .btn:hover { color: var(--text); border-color: var(--accent); background: var(--panel); }
+  .btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .btn.primary:hover { background: #3b8ae8; }
+  .btn.got-it { border-color: var(--green); color: var(--green); }
+  .btn.got-it:hover { background: rgba(52,211,153,0.1); }
+  .btn.missed { border-color: var(--red); color: var(--red); }
+  .btn.missed:hover { background: rgba(248,113,113,0.1); }
+  .btn svg { width: 14px; height: 14px; flex-shrink: 0; }
+
+  /* ── Keyboard hint ── */
+  .keyboard-hints {
+    display: flex; gap: 16px; flex-wrap: wrap; justify-content: center;
+  }
+  .kbd-hint { font-family: var(--mono); font-size: 11px; color: var(--dim); display: flex; align-items: center; gap: 5px; }
+  .kbd { background: var(--panel); border: 1px solid var(--border2); border-radius: 4px; padding: 2px 7px; font-size: 10px; color: var(--muted); }
+
+  /* ── Done screen ── */
+  .done-screen {
+    width: 100%; max-width: 680px;
+    border: 1px solid var(--border); border-radius: var(--radius);
+    background: var(--surface); padding: 48px 40px;
+    text-align: center;
+  }
+  .done-score { font-family: var(--mono); font-size: 56px; font-weight: 600; color: var(--green); line-height: 1; margin-bottom: 6px; }
+  .done-label { font-family: var(--mono); font-size: 13px; color: var(--muted); margin-bottom: 32px; }
+  .done-breakdown {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 12px; margin-bottom: 32px;
+  }
+  .breakdown-card {
+    background: var(--panel); border: 1px solid var(--border); border-radius: 8px;
+    padding: 14px 12px; text-align: center;
+  }
+  .breakdown-name { font-family: var(--mono); font-size: 10px; color: var(--muted); margin-bottom: 6px; letter-spacing: 0.05em; }
+  .breakdown-nums { font-family: var(--mono); font-size: 16px; font-weight: 600; color: var(--text); }
+  .breakdown-bar { height: 3px; background: var(--border); border-radius: 2px; margin-top: 8px; overflow: hidden; }
+  .breakdown-fill { height: 100%; border-radius: 2px; }
+  .done-actions { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+
+  /* ── Domain colors ── */
+  .dtag-1 { background: rgba(79,156,249,0.15); color: #93c5fd; }
+  .dtag-2 { background: rgba(167,139,250,0.15); color: #c4b5fd; }
+  .dtag-3 { background: rgba(52,211,153,0.15); color: #6ee7b7; }
+  .dtag-4 { background: rgba(251,191,36,0.15); color: #fcd34d; }
+  .dtag-5 { background: rgba(251,113,133,0.15); color: #fda4af; }
+  .dtag-tips { background: rgba(148,163,184,0.15); color: #cbd5e1; }
+
+  .dfill-1 { background: var(--d1); }
+  .dfill-2 { background: var(--d2); }
+  .dfill-3 { background: var(--d3); }
+  .dfill-4 { background: var(--d4); }
+  .dfill-5 { background: var(--d5); }
+  .dfill-tips { background: var(--tips); }
+
+  /* ── Animations ── */
+  @keyframes fadeSlideUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .card-scene { animation: fadeSlideUp 0.3s ease; }
+
+  /* ── Responsive ── */
+  @media (max-width: 600px) {
+    .header { padding: 14px 16px; }
+    .filter-bar { padding: 12px 16px; }
+    .main { padding: 20px 12px; }
+    :root { --card-h: 300px; }
+    .question-text { font-size: 17px; }
+    .controls { flex-direction: column; gap: 10px; }
+    .keyboard-hints { display: none; }
+    .done-screen { padding: 32px 20px; }
+  }
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<script type="text/babel">
+const { useState, useEffect, useCallback, useMemo } = React;
+
+// ── Raw flashcard data (parsed from CSV) ──────────────────────────────────
+const RAW_CARDS = [
+  ["Domain 1: AI & ML Fundamentals","What is the relationship between AI > ML > Deep Learning?","AI is the broadest field. ML is a subset of AI that learns from data. Deep Learning is a subset of ML using multi-layer neural networks."],
+  ["Domain 1: AI & ML Fundamentals","What is supervised learning?","ML where the model trains on labeled input-output pairs to learn to predict outputs for new inputs. Used for classification and regression."],
+  ["Domain 1: AI & ML Fundamentals","What is unsupervised learning?","ML where the model finds hidden patterns in unlabeled data. Used for clustering and dimensionality reduction."],
+  ["Domain 1: AI & ML Fundamentals","What is reinforcement learning?","ML where an agent learns by taking actions in an environment and receiving rewards or penalties to maximize cumulative reward."],
+  ["Domain 1: AI & ML Fundamentals","What is overfitting?","When a model memorizes training data too closely (including noise) and performs poorly on unseen data. High variance problem."],
+  ["Domain 1: AI & ML Fundamentals","What is underfitting?","When a model is too simple to capture patterns in training data — performs poorly on both training and test sets. High bias problem."],
+  ["Domain 1: AI & ML Fundamentals","What does Precision measure?","Of all the positive predictions the model made — how many were actually correct? Minimizes false positives."],
+  ["Domain 1: AI & ML Fundamentals","What does Recall measure?","Of all actual positive cases — how many did the model correctly identify? Minimizes false negatives (critical in healthcare)."],
+  ["Domain 1: AI & ML Fundamentals","What is the F1 Score?","The harmonic mean of Precision and Recall. Used when both false positives and false negatives are important."],
+  ["Domain 1: AI & ML Fundamentals","What is Amazon Rekognition?","AWS managed service for image and video analysis — object detection/labeling + face recognition + content moderation at massive scale."],
+  ["Domain 1: AI & ML Fundamentals","What is Amazon Comprehend?","AWS NLP service — analyzes text for sentiment + entities + key phrases + language detection. Great for product review analysis."],
+  ["Domain 1: AI & ML Fundamentals","What is Amazon Transcribe?","AWS speech-to-text service. Includes Amazon Transcribe Medical for converting clinical notes to text."],
+  ["Domain 1: AI & ML Fundamentals","What is Amazon Lex?","AWS service for building conversational chatbots with both voice and text interfaces. Powers Amazon Alexa."],
+  ["Domain 1: AI & ML Fundamentals","What is Amazon SageMaker AI?","AWS's fully managed end-to-end ML platform. Covers data prep + model training + evaluation + deployment + monitoring in one place."],
+  ["Domain 1: AI & ML Fundamentals","What is Amazon SageMaker Clarify?","SageMaker feature for detecting bias in training data and models + providing model explainability (XAI) reports."],
+  ["Domain 1: AI & ML Fundamentals","Name the 6 stages of the ML lifecycle.","Problem framing → Data collection & prep → Model training → Evaluation → Deployment → Monitoring"],
+  ["Domain 2: GenAI Fundamentals","What is a Foundation Model (FM)?","A large pre-trained model trained on broad data that can be adapted to many downstream tasks via prompting or fine-tuning (e.g. Claude + Titan + Llama)."],
+  ["Domain 2: GenAI Fundamentals","What is Amazon Bedrock?","Fully managed AWS service providing API access to FMs from multiple providers (Anthropic + Amazon + Meta + Stability AI + AI21 Labs) with no infrastructure to manage."],
+  ["Domain 2: GenAI Fundamentals","What is a token in LLMs?","The basic unit of text LLMs process — roughly a word or word-piece. Context window size is measured in tokens."],
+  ["Domain 2: GenAI Fundamentals","What is a context window?","The maximum number of tokens an LLM can process in a single request (input + output combined)."],
+  ["Domain 2: GenAI Fundamentals","What are vector embeddings?","Numerical representations of text/images/audio in n-dimensional space. Similar concepts have vectors that are close together — enables semantic search."],
+  ["Domain 2: GenAI Fundamentals","What is a vector database?","A database optimized to store and query vector embeddings using similarity algorithms (k-NN or cosine similarity). Examples: OpenSearch + pgvector + Redis."],
+  ["Domain 2: GenAI Fundamentals","What is zero-shot prompting?","Asking an LLM to perform a task with no examples — just a direct instruction. Relies on the model's pre-trained knowledge."],
+  ["Domain 2: GenAI Fundamentals","What is few-shot prompting?","Including 2-5 input-output examples in the prompt to demonstrate the desired task format or behavior before the actual request."],
+  ["Domain 2: GenAI Fundamentals","What is chain-of-thought prompting?","Instructing the model to reason step-by-step before giving a final answer — improves accuracy on complex reasoning tasks."],
+  ["Domain 2: GenAI Fundamentals","What is RLHF?","Reinforcement Learning from Human Feedback — technique used to fine-tune LLMs to follow instructions and produce preferred outputs using human rater scores."],
+  ["Domain 2: GenAI Fundamentals","What is AWS Trainium?","AWS custom chip optimized for training large ML and AI models at lower cost than general GPU instances."],
+  ["Domain 2: GenAI Fundamentals","What is AWS Inferentia?","AWS custom chip optimized for fast + low-cost model inference (serving predictions) in production."],
+  ["Domain 2: GenAI Fundamentals","Name 4 foundation model providers on Amazon Bedrock.","Anthropic (Claude) + Amazon (Titan) + Meta (Llama 2) + Stability AI (Stable Diffusion) + AI21 Labs (Jamba) + Cohere (Command)"],
+  ["Domain 3: Foundation Model Applications","What is RAG (Retrieval Augmented Generation)?","An approach that retrieves relevant documents from a knowledge base at query time and provides them as context to the FM — reducing hallucinations and grounding responses in real data."],
+  ["Domain 3: Foundation Model Applications","What is Amazon Bedrock Knowledge Bases?","Managed RAG service — connects a foundation model to your data sources (S3 + databases) and handles chunking + embedding + storage + retrieval automatically."],
+  ["Domain 3: Foundation Model Applications","When should you choose RAG over fine-tuning?","Use RAG when you need dynamic/up-to-date knowledge + when data is proprietary + when you want to reduce hallucinations without expensive retraining."],
+  ["Domain 3: Foundation Model Applications","When should you choose fine-tuning over RAG?","Use fine-tuning when you need the model to adopt a specific style + tone + or format + or learn domain-specific behavior that's consistent regardless of input."],
+  ["Domain 3: Foundation Model Applications","What is Amazon Bedrock Agents?","Bedrock feature enabling foundation models to autonomously execute multi-step workflows — calling APIs + querying databases + invoking Lambda functions."],
+  ["Domain 3: Foundation Model Applications","What is hallucination in LLMs?","When a model generates plausible-sounding but factually incorrect or fabricated information — a key challenge with LLMs that RAG helps mitigate."],
+  ["Domain 3: Foundation Model Applications","What is the BLEU metric?","Bilingual Evaluation Understudy — measures quality of machine-generated text (especially translation) by comparing n-gram overlap with reference text."],
+  ["Domain 3: Foundation Model Applications","What is the ROUGE metric?","Recall-Oriented Understudy for Gisting Evaluation — measures overlap between generated summaries and reference summaries. Common for summarization tasks."],
+  ["Domain 3: Foundation Model Applications","What vector stores does Bedrock Knowledge Bases support?","Amazon OpenSearch Serverless + Amazon Aurora (pgvector) + Amazon Neptune + Redis Enterprise Cloud + MongoDB Atlas + Pinecone"],
+  ["Domain 3: Foundation Model Applications","What is model grounding?","Ensuring a model's outputs are backed by or traceable to real source documents — reduces hallucination and increases trustworthiness."],
+  ["Domain 4: Responsible AI","What are the 6 principles of Responsible AI?","Fairness + Transparency + Privacy + Robustness + Accountability + Veracity (accuracy)"],
+  ["Domain 4: Responsible AI","What is AI fairness?","Ensuring that AI systems produce equitable outcomes and do not discriminate based on protected characteristics like race + gender + or age."],
+  ["Domain 4: Responsible AI","What is model transparency / explainability (XAI)?","The ability for humans to understand why a model made a specific prediction or decision. Essential for trust + especially in regulated industries."],
+  ["Domain 4: Responsible AI","What is data bias?","Occurs when training data over-represents or under-represents certain groups — leading to skewed model predictions that disadvantage those groups."],
+  ["Domain 4: Responsible AI","What is an AI Model Card?","A document that describes a model's intended use + performance characteristics + known limitations + and ethical considerations — promotes transparency."],
+  ["Domain 4: Responsible AI","What does Amazon SageMaker Clarify detect?","Bias in training datasets and trained models + and provides feature importance / SHAP-based explainability for model predictions."],
+  ["Domain 4: Responsible AI","What are AWS AI Service Cards?","AWS documentation that describes the intended use + performance + limitations + and responsible AI design choices for each AWS AI service."],
+  ["Domain 4: Responsible AI","What is model robustness?","The ability of a model to maintain accurate performance when exposed to adversarial inputs + noisy data + or distribution shifts from training data."],
+  ["Domain 5: Security & Governance","What is the AWS Shared Responsibility Model for AI?","AWS is responsible for security OF the cloud (infrastructure + service availability). Customers are responsible for security IN the cloud (IAM + data classification + application security)."],
+  ["Domain 5: Security & Governance","What are Amazon Bedrock Guardrails?","Bedrock feature that allows you to define content filters + topic restrictions + PII redaction + and grounding checks for FM-powered applications."],
+  ["Domain 5: Security & Governance","What is prompt injection?","OWASP Top 10 LLM threat where an attacker embeds malicious instructions in user input to override system prompt instructions and manipulate the model."],
+  ["Domain 5: Security & Governance","What is AWS CloudTrail used for in AI security?","Logging all API calls made to AWS services (including Bedrock + SageMaker) — provides an audit trail for compliance + security + and forensic investigation."],
+  ["Domain 5: Security & Governance","What is Amazon Macie?","AWS service that uses ML to automatically discover + classify + and protect sensitive data (PII) stored in Amazon S3."],
+  ["Domain 5: Security & Governance","What is data poisoning?","An adversarial attack where malicious data is injected into training datasets to corrupt model behavior or introduce backdoors."],
+  ["Domain 5: Security & Governance","What compliance standard applies to AI workloads?","ISO/IEC 27002 is the information security standard commonly referenced for AI workloads. OWASP Top 10 for LLMs covers application-level AI security risks."],
+  ["Domain 5: Security & Governance","What is AWS Audit Manager used for?","Continuously assessing and auditing AWS workloads (including AI services) against compliance frameworks and generating evidence reports."],
+  ["Domain 5: Security & Governance","What is the principle of least privilege in AI?","IAM roles and policies should grant only the minimum permissions necessary for an AI service or application to function — reducing attack surface."],
+  ["Domain 5: Security & Governance","What is a VPC endpoint used for in AI security?","Allows traffic to AWS AI services (like Bedrock) to remain within your private network — preventing it from traversing the public internet."],
+  ["Exam Tips","What is the minimum passing score for AIF-C01?","700 out of 1000 (scaled score). The exam uses compensatory scoring — you don't need to pass each domain separately."],
+  ["Exam Tips","How many questions are on the AIF-C01 exam?","65 total questions — 50 scored + 15 unscored pilot questions. Unscored questions are not identified on the exam."],
+  ["Exam Tips","RAG vs Fine-tuning — key differentiator for exam?","RAG = real-time/dynamic knowledge + proprietary data + reduce hallucinations. Fine-tuning = style/tone/format + consistent behavior + requires labeled training examples."],
+  ["Exam Tips","SageMaker vs Bedrock — when to use which?","SageMaker = building + training + deploying CUSTOM ML models. Bedrock = consuming pre-trained FOUNDATION MODELS via API with no infrastructure management."],
+  ["Exam Tips","Domain 3 is the highest weighted domain — what % is it?","28% of the exam — about 14 questions. Focus heavily on RAG + fine-tuning + Bedrock agents + FM evaluation metrics."],
+];
+
+// ── Helpers ──────────────────────────────────────────────────────────────
+function domainKey(raw) {
+  if (raw.startsWith("Domain 1")) return "1";
+  if (raw.startsWith("Domain 2")) return "2";
+  if (raw.startsWith("Domain 3")) return "3";
+  if (raw.startsWith("Domain 4")) return "4";
+  if (raw.startsWith("Domain 5")) return "5";
+  return "tips";
+}
+function domainShort(key) {
+  const m = { "1":"D1 · AI/ML", "2":"D2 · GenAI", "3":"D3 · FMs", "4":"D4 · Responsible AI", "5":"D5 · Security", "tips":"Exam Tips" };
+  return m[key] || key;
+}
+function domainFull(key) {
+  const m = {
+    "1":"Domain 1: AI & ML Fundamentals",
+    "2":"Domain 2: GenAI Fundamentals",
+    "3":"Domain 3: Foundation Model Applications",
+    "4":"Domain 4: Responsible AI",
+    "5":"Domain 5: Security & Governance",
+    "tips":"Exam Tips"
+  };
+  return m[key] || key;
+}
+
+const CARDS = RAW_CARDS.map((r, i) => ({ id: i, domain: domainKey(r[0]), front: r[1], back: r[2] }));
+
+function shuffle(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+// ── Icons ─────────────────────────────────────────────────────────────────
+const IconNext  = () => <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>;
+const IconPrev  = () => <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2"><path d="M13 8H3M7 12 3 8l4-4"/></svg>;
+const IconCheck = () => <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 8l3 3 7-7"/></svg>;
+const IconX     = () => <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 4l8 8M12 4l-8 8"/></svg>;
+const IconShuffle = () => <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2"><path d="M2 5h3l7 6h2M14 5h-2l-2 1.5M2 11h3l2-1.5"/></svg>;
+const IconReset = () => <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 8a5 5 0 1 0 1.5-3.5L3 6V2H7"/></svg>;
+
+// ── Main App ──────────────────────────────────────────────────────────────
+function App() {
+  const [domainFilter, setDomainFilter] = useState("all");
+  const [deck, setDeck]       = useState(() => shuffle(CARDS));
+  const [idx, setIdx]         = useState(0);
+  const [flipped, setFlipped] = useState(false);
+  const [known, setKnown]     = useState({});   // id → true/false
+  const [done, setDone]       = useState(false);
+
+  const filteredBase = useMemo(() =>
+    domainFilter === "all" ? CARDS : CARDS.filter(c => c.domain === domainFilter),
+    [domainFilter]
+  );
+
+  // Re-shuffle when filter changes
+  useEffect(() => {
+    setDeck(shuffle(filteredBase));
+    setIdx(0); setFlipped(false); setKnown({}); setDone(false);
+  }, [domainFilter]);
+
+  const card = deck[idx];
+  const total = deck.length;
+  const answeredCount = Object.keys(known).length;
+  const gotItCount = Object.values(known).filter(Boolean).length;
+  const missedCount = answeredCount - gotItCount;
+  const pct = total ? Math.round((idx / total) * 100) : 0;
+
+  const flip = useCallback(() => setFlipped(f => !f), []);
+
+  const mark = useCallback((wasKnown) => {
+    setKnown(prev => ({ ...prev, [card.id]: wasKnown }));
+    setFlipped(false);
+    setTimeout(() => {
+      if (idx + 1 >= total) { setDone(true); }
+      else { setIdx(i => i + 1); }
+    }, 120);
+  }, [card, idx, total]);
+
+  const prev = useCallback(() => {
+    if (idx === 0) return;
+    setIdx(i => i - 1); setFlipped(false);
+  }, [idx]);
+
+  const next = useCallback(() => {
+    if (idx + 1 >= total) { setDone(true); return; }
+    setIdx(i => i + 1); setFlipped(false);
+  }, [idx, total]);
+
+  const restart = useCallback((reviewMissed = false) => {
+    const base = reviewMissed
+      ? deck.filter(c => known[c.id] === false)
+      : filteredBase;
+    setDeck(shuffle(base.length ? base : filteredBase));
+    setIdx(0); setFlipped(false); setKnown({}); setDone(false);
+  }, [deck, known, filteredBase]);
+
+  // Keyboard
+  useEffect(() => {
+    const handler = (e) => {
+      if (done) return;
+      if (e.key === " " || e.key === "Enter") { e.preventDefault(); flip(); }
+      if (e.key === "ArrowRight") next();
+      if (e.key === "ArrowLeft")  prev();
+      if (e.key === "1" && flipped) mark(true);
+      if (e.key === "2" && flipped) mark(false);
+    };
+    window.addEventListener("keydown", handler);
+    return () => window.removeEventListener("keydown", handler);
+  }, [flip, next, prev, mark, flipped, done]);
+
+  // Domain counts
+  const domainCounts = useMemo(() => {
+    const c = {};
+    CARDS.forEach(card => { c[card.domain] = (c[card.domain] || 0) + 1; });
+    return c;
+  }, []);
+
+  // Breakdown for done screen
+  const breakdown = useMemo(() => {
+    const b = {};
+    deck.forEach(c => {
+      if (!b[c.domain]) b[c.domain] = { got: 0, total: 0 };
+      b[c.domain].total++;
+      if (known[c.id]) b[c.domain].got++;
+    });
+    return b;
+  }, [deck, known]);
+
+  const DOMAINS = [
+    { key: "all",  label: "All Cards", cls: "d0" },
+    { key: "1",    label: `D1 · AI/ML (${domainCounts["1"]})`, cls: "d1" },
+    { key: "2",    label: `D2 · GenAI (${domainCounts["2"]})`, cls: "d2" },
+    { key: "3",    label: `D3 · FM Apps (${domainCounts["3"]})`, cls: "d3" },
+    { key: "4",    label: `D4 · Responsible AI (${domainCounts["4"]})`, cls: "d4" },
+    { key: "5",    label: `D5 · Security (${domainCounts["5"]})`, cls: "d5" },
+    { key: "tips", label: `Exam Tips (${domainCounts["tips"]})`, cls: "dtips" },
+  ];
+
+  return (
+    <div className="app">
+      {/* Header */}
+      <header className="header">
+        <div className="logo">
+          <div className="logo-dot" />
+          AWS · <span>AI Practitioner Flashcards</span>
+          <span style={{color:"var(--dim)"}}>· AIF-C01</span>
+        </div>
+        <div className="header-stats">
+          <div className="stat"><span>Total</span><span className="stat-val">{total}</span></div>
+          <div className="stat"><span>Got it</span><span className="stat-val green">{gotItCount}</span></div>
+          <div className="stat"><span>Missed</span><span className="stat-val red">{missedCount}</span></div>
+          <div className="stat"><span>Left</span><span className="stat-val amber">{total - answeredCount}</span></div>
+        </div>
+      </header>
+
+      {/* Filter */}
+      <div className="filter-bar">
+        <span className="filter-label">Filter:</span>
+        {DOMAINS.map(d => (
+          <button
+            key={d.key}
+            className={`chip ${d.cls} ${domainFilter === d.key ? "active" : ""}`}
+            onClick={() => setDomainFilter(d.key)}
+          >{d.label}</button>
+        ))}
+      </div>
+
+      {/* Main */}
+      <main className="main">
+        {done ? (
+          <div className="done-screen">
+            <div className="done-score">{gotItCount}/{total}</div>
+            <div className="done-label">
+              {Math.round((gotItCount/total)*100)}% — {gotItCount === total ? "Perfect round!" : gotItCount/total >= 0.8 ? "Strong!" : gotItCount/total >= 0.6 ? "Getting there." : "Keep drilling."}
+            </div>
+            <div className="done-breakdown">
+              {Object.entries(breakdown).map(([key, val]) => (
+                <div className="breakdown-card" key={key}>
+                  <div className="breakdown-name">{domainShort(key)}</div>
+                  <div className="breakdown-nums">{val.got}/{val.total}</div>
+                  <div className="breakdown-bar">
+                    <div className={`breakdown-fill dfill-${key}`} style={{width: `${val.total ? Math.round((val.got/val.total)*100) : 0}%`}} />
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="done-actions">
+              {missedCount > 0 && (
+                <button className="btn missed" onClick={() => restart(true)}>
+                  <IconReset /> Review {missedCount} missed
+                </button>
+              )}
+              <button className="btn primary" onClick={() => restart(false)}>
+                <IconShuffle /> Shuffle & restart
+              </button>
+            </div>
+          </div>
+        ) : (
+          <>
+            {/* Progress */}
+            <div className="progress-row">
+              <div className="progress-track">
+                <div className="progress-fill" style={{width: `${pct}%`}} />
+              </div>
+              <span className="progress-label">{idx + 1} / {total}</span>
+            </div>
+
+            {/* Card */}
+            <div className="card-scene" onClick={flip} key={card.id}>
+              <div className={`card-inner ${flipped ? "flipped" : ""}`}>
+                {/* Front */}
+                <div className="card-face card-front">
+                  <div className="card-header">
+                    <span className={`domain-tag dtag-${card.domain}`}>{domainFull(card.domain)}</span>
+                    <span className="face-label">Question</span>
+                  </div>
+                  <div className="card-body">
+                    <p className="question-text">{card.front}</p>
+                  </div>
+                  <div className="card-hint">click to reveal answer</div>
+                </div>
+                {/* Back */}
+                <div className="card-face back">
+                  <div className="card-header">
+                    <span className={`domain-tag dtag-${card.domain}`}>{domainFull(card.domain)}</span>
+                    <span className="face-label">Answer</span>
+                  </div>
+                  <div className="card-body">
+                    <p className="answer-text">{card.back}</p>
+                  </div>
+                  <div className="card-hint">mark yourself below</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Controls */}
+            <div className="controls">
+              <div className="btn-group">
+                <button className="btn" onClick={prev} disabled={idx === 0} title="Previous (←)">
+                  <IconPrev /> Prev
+                </button>
+                <button className="btn" onClick={next} title="Next (→)">
+                  Next <IconNext />
+                </button>
+              </div>
+
+              <div className="btn-group">
+                <button className="btn missed" onClick={() => mark(false)} disabled={!flipped} title="Missed (2)">
+                  <IconX /> Missed
+                </button>
+                <button className="btn got-it" onClick={() => mark(true)} disabled={!flipped} title="Got it (1)">
+                  <IconCheck /> Got it
+                </button>
+              </div>
+            </div>
+
+            {/* Keyboard hints */}
+            <div className="keyboard-hints">
+              <span className="kbd-hint"><kbd className="kbd">Space</kbd> flip card</span>
+              <span className="kbd-hint"><kbd className="kbd">←</kbd><kbd className="kbd">→</kbd> navigate</span>
+              <span className="kbd-hint"><kbd className="kbd">1</kbd> got it</span>
+              <span className="kbd-hint"><kbd className="kbd">2</kbd> missed</span>
+            </div>
+          </>
+        )}
+      </main>
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+</script>
+</body>
+</html>
