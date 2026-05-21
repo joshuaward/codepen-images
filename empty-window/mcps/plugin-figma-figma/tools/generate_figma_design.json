@@ -1,0 +1,40 @@
+{
+  "name": "generate_figma_design",
+  "description": "Capture, import, or convert a web page (by URL) or HTML into a Figma design. Use this tool when the user wants to send, import, capture, screenshot, or push a webpage to Figma. Works with both local dev servers (localhost) and external websites. For LOCAL projects: explore the user's codebase to identify the page, dev server command, and URL before calling. For EXTERNAL URLs (not localhost): use Playwright MCP to capture — do NOT use 'open' with hash fragments on external sites. Call this tool without outputMode first to get detailed capture instructions and choose output mode. After capture, poll with captureId every 5 seconds (up to 10 times) until status is 'completed'. Each capture ID is single-use.\n\nUSING generate_figma_design WITH use_figma:\n- For web apps, use BOTH tools in parallel: run this tool (generate_figma_design) to capture a pixel-perfect layout, and use use_figma with search_design_system to build the screen from design system components.\n- Once both complete, refine the use_figma output to match the pixel-perfect layout from this tool's capture, then delete this tool's output (it was used as a layout reference only).\n- For non-web apps (e.g. iOS), use use_figma only.\n- For updating/syncing a page already in Figma, use use_figma only.",
+  "arguments": {
+    "type": "object",
+    "properties": {
+      "captureId": {
+        "type": "string",
+        "description": "ID returned from initial call to check capture status. If provided, polls for completion. Each capture ID is single-use and can only capture one page. To capture multiple pages, either: (1) use one capture ID for one page and let the user manually navigate to other pages via the capture toolbar (which auto-generates new capture IDs), or (2) call this tool once per page to generate a separate capture ID for each."
+      },
+      "fileName": {
+        "type": "string",
+        "description": "Only include this if outputMode is 'newFile'. The name of the Figma file to generate. Never ask the user for this, just auto-generate it."
+      },
+      "planKey": {
+        "type": "string",
+        "description": "Only include this if outputMode is 'newFile'.  The team or organization key where the generated design file should be saved. If not provided, returns a list of available plans to choose from."
+      },
+      "outputMode": {
+        "type": "string",
+        "enum": [
+          "newFile",
+          "existingFile",
+          "clipboard"
+        ],
+        "description": "How to output the captured design. \"newFile\" creates a new Figma file. \"existingFile\" adds to an existing file. \"clipboard\" copies the design to clipboard for pasting. If omitted, the tool returns options for the user to choose from."
+      },
+      "fileKey": {
+        "type": "string",
+        "description": "Only include this if outputMode is 'existingFile'. The key of the target Figma file. Can be extracted from a Figma URL like \"figma.com/design/{fileKey}/...\" or from a claim URL like \"figma.com/integrations/claim/{fileKey}\". When polling a completed newFile capture, the file_key is provided in the response. Note: If the file was just created via a claim URL, the user must open the claim URL first to claim the file before it can be edited with existingFile mode."
+      },
+      "nodeId": {
+        "type": "string",
+        "description": "Only include this if outputMode is 'existingFile'. Optional node ID where the design should be added. If not provided, creates a new page in the file. Format: \"123:456\""
+      }
+    },
+    "additionalProperties": false,
+    "$schema": "http://json-schema.org/draft-07/schema#"
+  }
+}

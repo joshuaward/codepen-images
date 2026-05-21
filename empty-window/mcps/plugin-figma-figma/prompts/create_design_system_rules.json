@@ -1,0 +1,5 @@
+{
+  "name": "create_design_system_rules",
+  "description": "Provides a prompt to generate design system rules for this repo.",
+  "arguments": []
+}

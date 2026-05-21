@@ -1,0 +1,34 @@
+{
+  "name": "use_figma",
+  "description": "Create, edit, generate, or sync any design in Figma — UIs, screens, mockups, components, frames, variables, styles, text, images, layouts, and design systems. This is the general-purpose tool for writing to Figma; it works by running JavaScript via the Figma Plugin API. Works on Figma design files (URL path `/design/`), FigJam boards (`/board/`), and Figma Slides (`/slides/`).\n\nIMPORTANT: If the /figma-use skill is available, load it before calling this tool.\n\nUse this tool when the user wants to:\n- Create or generate a design, screen, UI, or mockup in Figma — from scratch, from intent, or from code\n- Update, edit, or sync an existing Figma design\n- Generate or sync Figma designs from source code\n- Set up or modify design tokens, variables, or styles\n- Build or extend a design system or component/variant library\n- Fix layout, spacing, auto-layout, or fill/hug issues\n- Add component descriptions or Code Connect metadata to nodes\n- Review or fix accessibility, contrast, typography, or visual polish\n- Inspect or query node properties programmatically\n\nCHOOSING BETWEEN use_figma AND generate_figma_design:\n- Default to this tool (use_figma) for all Figma write operations.\n- generate_figma_design is the exception: use it ONLY when capturing a web app page or view into Figma for the first time. For web apps, run both tools in parallel — generate_figma_design captures a pixel-perfect screenshot, use_figma builds the screen from imported design system components, then refine use_figma against the screenshot.\n- For non-web targets (iOS, Android, generic UI) and from-scratch designs, use this tool only.\n- For updating or syncing a Figma page already captured into Figma, use this tool — even if the source code has changed.\n\nGOTCHAS:\n- For the font \"Inter\", the style is \"Semi Bold\" (with a space), not \"SemiBold\". Same for \"Extra Bold\" not \"ExtraBold\".\n- Setting figma.currentPage is not supported. Use `await figma.setCurrentPageAsync(page)` instead.\n- getPluginData / setPluginData / getPluginDataKeys are NOT supported here (web-only, require a plugin manifest id). Use getSharedPluginData(namespace, key) / setSharedPluginData(...) / getSharedPluginDataKeys(namespace) instead. Pick a stable namespace (>=3 chars, alphanumeric/_/.) unique to your integration.\n\nREUSE THE DESIGN SYSTEM FIRST:\nBefore creating components, styles, or tokens from scratch, call search_design_system to find existing matches. Import component matches via importComponentByKeyAsync or importComponentSetByKeyAsync rather than recreating them. Reuse existing variables and styles rather than defining new ones.\n",
+  "arguments": {
+    "type": "object",
+    "properties": {
+      "fileKey": {
+        "type": "string",
+        "description": "The key of the Figma file to use. If the URL is provided, extract the file key from the URL. The given URL must be in the format https://figma.com/design/:fileKey/:fileName?node-id=:int1-:int2. The extracted fileKey would be `:fileKey`."
+      },
+      "code": {
+        "type": "string",
+        "maxLength": 50000,
+        "description": "JavaScript code to execute. Has access to the `figma` global (Figma Plugin API)"
+      },
+      "description": {
+        "type": "string",
+        "maxLength": 2000,
+        "description": "A concise description of what the code aims to do"
+      },
+      "skillNames": {
+        "type": "string",
+        "description": "A comma-separated list of Figma skill names being followed, if any (e.g. \"figma-use\", \"figma-use,figma-generate-design\"). Only pass this when explicitly instructed to by skill documentation. Used for logging purposes. If the skill was loaded via a skill-content MCP resource, prefix the skill name with \"resource:\". (e.g. \"resource:figma-use\", \"resource:figma-use,resource:figma-generate-design\")"
+      }
+    },
+    "required": [
+      "fileKey",
+      "code",
+      "description"
+    ],
+    "additionalProperties": false,
+    "$schema": "http://json-schema.org/draft-07/schema#"
+  }
+}

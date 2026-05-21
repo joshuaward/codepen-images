@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our European Adventure — For Alisha</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ivory: #f8f5f0;
+      --charcoal: #2c2a28;
+      --terracotta: #b85c38;
+      --terracotta-soft: #d4846a;
+      --sage: #6b7f6a;
+      --sage-light: #e8ede7;
+      --cream-dark: #ebe6de;
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-body: 'Source Sans 3', system-ui, sans-serif;
+      --transition: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html {
+      scroll-snap-type: y mandatory;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-body);
+      font-weight: 300;
+      color: var(--charcoal);
+      background: var(--ivory);
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    /* Progress */
+    .progress-track {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--cream-dark);
+      z-index: 1000;
+    }
+    .progress-fill {
+      height: 100%;
+      background: var(--terracotta);
+      width: 0%;
+      transition: width 0.15s ease-out;
+    }
+
+    .nav-hint {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--sage);
+      z-index: 999;
+      opacity: 0.7;
+    }
+
+    /* Sections */
+    section {
+      min-height: 100vh;
+      scroll-snap-align: start;
+      scroll-snap-stop: always;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 4rem 2rem;
+      position: relative;
+    }
+
+    section .inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      width: 100%;
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity var(--transition), transform var(--transition);
+    }
+
+    section.visible .inner {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h1, h2, h3 {
+      font-family: var(--font-display);
+      font-weight: 600;
+      line-height: 1.15;
+    }
+
+    h1 { font-size: clamp(2.5rem, 6vw, 4.2rem); }
+    h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1rem; }
+    h3 { font-size: clamp(1.35rem, 2.5vw, 1.75rem); margin-bottom: 0.75rem; color: var(--terracotta); }
+
+    .eyebrow {
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--terracotta);
+      margin-bottom: 0.75rem;
+      font-weight: 600;
+    }
+
+    .lead {
+      font-size: 1.15rem;
+      max-width: 42rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .accent { color: var(--terracotta); }
+
+    /* Hero */
+    .hero {
+      padding: 0;
+      color: #fff;
+      text-align: center;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Sentiero_del_Viandante_DSC_6340_%2814020554463%29.jpg/1280px-Sentiero_del_Viandante_DSC_6340_%2814020554463%29.jpg') center/cover no-repeat;
+    }
+
+    .hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(44,42,40,0.35) 0%, rgba(44,42,40,0.65) 100%);
+    }
+
+    .hero .inner {
+      position: relative;
+      z-index: 1;
+      padding: 4rem 2rem;
+    }
+
+    .hero h1 { color: #fff; margin-bottom: 0.5rem; }
+    .hero .subtitle {
+      font-family: var(--font-display);
+      font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+      font-style: italic;
+      font-weight: 400;
+      opacity: 0.95;
+      margin-bottom: 1.5rem;
+    }
+    .hero .dedication {
+      font-size: 0.85rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      opacity: 0.85;
+    }
+
+    /* Split layout */
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .split.reverse .media { order: -1; }
+
+    .media img {
+      width: 100%;
+      height: auto;
+      max-height: 420px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+
+    section.visible .media img {
+      transform: scale(1.02);
+    }
+
+    .media.rounded img { border-radius: 2px; }
+
+    .video-wrap {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      margin-top: 1.5rem;
+      background: var(--cream-dark);
+    }
+
+    .video-wrap iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* Lists */
+    ul.highlights {
+      list-style: none;
+      margin: 1rem 0;
+    }
+
+    ul.highlights li {
+      padding: 0.4rem 0 0.4rem 1.25rem;
+      position: relative;
+      font-size: 0.95rem;
+    }
+
+    ul.highlights li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.85rem;
+      width: 6px;
+      height: 6px;
+      background: var(--terracotta);
+      border-radius: 50%;
+    }
+
+    .proposed {
+      margin-top: 1.25rem;
+      padding: 1rem 1.25rem;
+      background: var(--sage-light);
+      border-left: 3px solid var(--sage);
+      font-size: 0.9rem;
+    }
+
+    .proposed strong { font-weight: 600; color: var(--charcoal); }
+
+    /* Thursday sell */
+    .benefit-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+      margin: 2rem 0;
+    }
+
+    .benefit-card {
+      padding: 1.5rem;
+      background: #fff;
+      border: 1px solid var(--cream-dark);
+    }
+
+    .benefit-card h4 {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+      color: var(--terracotta);
+    }
+
+    .benefit-card p { font-size: 0.9rem; }
+
+    .footnote {
+      font-size: 0.85rem;
+      color: var(--sage);
+      font-style: italic;
+      margin-top: 1.5rem;
+      max-width: 36rem;
+    }
+
+    /* Calendar strip */
+    .calendar-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 2rem 0;
+      align-items: stretch;
+    }
+
+    .cal-day {
+      flex: 1;
+      min-width: 72px;
+      padding: 0.75rem 0.5rem;
+      text-align: center;
+      background: #fff;
+      border: 1px solid var(--cream-dark);
+      font-size: 0.75rem;
+    }
+
+    .cal-day.highlight {
+      background: var(--terracotta);
+      color: #fff;
+      border-color: var(--terracotta);
+    }
+
+    .cal-day.sage {
+      background: var(--sage-light);
+      border-color: var(--sage);
+    }
+
+    .cal-day .day-name { font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; }
+    .cal-day .day-date { font-size: 0.65rem; opacity: 0.85; margin-top: 0.25rem; }
+    .cal-day .day-label { margin-top: 0.35rem; font-size: 0.65rem; line-height: 1.3; }
+
+    /* Empathy */
+    .promise-list {
+      margin: 1.5rem 0;
+    }
+
+    .promise-list li {
+      padding: 0.6rem 0;
+      border-bottom: 1px solid var(--cream-dark);
+      list-style: none;
+      padding-left: 0;
+    }
+
+    /* Timeline */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin: 2rem 0;
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 3rem 1fr;
+      gap: 1rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--cream-dark);
+    }
+
+    .timeline-num {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      color: var(--terracotta);
+      font-weight: 600;
+    }
+
+    /* Full bleed destination */
+    .destination-hero {
+      min-height: 40vh;
+      background-size: cover;
+      background-position: center;
+      margin: -2rem -2rem 2rem;
+      position: relative;
+    }
+
+    .destination-hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, var(--ivory) 0%, transparent 60%);
+    }
+
+    .destination-header {
+      position: relative;
+      z-index: 1;
+      padding: 2rem;
+      margin-top: auto;
+    }
+
+    /* Flexibility */
+    .two-paths {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .path-card {
+      padding: 1.5rem;
+      border: 1px solid var(--cream-dark);
+      background: #fff;
+    }
+
+    .path-card h4 {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Closing */
+    .closing {
+      text-align: center;
+      background: var(--charcoal);
+      color: var(--ivory);
+    }
+
+    .closing h2 { color: var(--ivory); }
+    .closing .letter {
+      font-family: var(--font-display);
+      font-size: clamp(1.15rem, 2vw, 1.45rem);
+      font-style: italic;
+      max-width: 36rem;
+      margin: 1.5rem auto;
+      line-height: 1.7;
+      font-weight: 400;
+    }
+
+    .closing .signature {
+      margin-top: 2rem;
+      font-size: 0.85rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--terracotta-soft);
+    }
+
+    /* Section variants */
+    section.alt-bg { background: #fff; }
+    section.sage-bg { background: var(--sage-light); }
+
+    @media (max-width: 768px) {
+      section { padding: 3rem 1.25rem; }
+      .split { grid-template-columns: 1fr; gap: 1.5rem; }
+      .split.reverse .media { order: 0; }
+      .two-paths { grid-template-columns: 1fr; }
+      .cal-day { min-width: calc(33% - 0.5rem); }
+      .destination-hero { margin: -1.25rem -1.25rem 1.5rem; min-height: 28vh; }
+    }
+
+    @media print {
+      html { scroll-snap-type: none; }
+      .progress-track, .nav-hint { display: none; }
+      .video-wrap { display: none; }
+      section { min-height: auto; page-break-inside: avoid; }
+      section .inner { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="progress-track"><div class="progress-fill" id="progress"></div></div>
+  <div class="nav-hint">Scroll or use arrow keys</div>
+
+  <main>
+
+    <!-- 1. Hero -->
+    <section class="hero" id="hero">
+      <div class="hero-bg" role="img" aria-label="Lake Como, Italy"></div>
+      <div class="inner">
+        <p class="dedication">Made with love, for Alisha</p>
+        <h1>Our European Adventure</h1>
+        <p class="subtitle">Milan to Naples — and every beautiful detour in between</p>
+        <p class="dedication">Italy · Croatia · Montenegro · September 2026</p>
+      </div>
+    </section>
+
+    <!-- 2. Why Thursday -->
+    <section id="why-thursday">
+      <div class="inner">
+        <p class="eyebrow">The gentle case for one extra day</p>
+        <h2>Why leave on <span class="accent">Thursday, August 27</span>?</h2>
+        <p class="lead">This isn't about squeezing in more miles for me. It's about how we <em>feel</em> when we land — rested, unhurried, and waking up to a weekend on Lake Como instead of a travel day lost to jet lag and workweek rhythm.</p>
+
+        <div class="benefit-grid">
+          <div class="benefit-card">
+            <h4>Arrive on Friday</h4>
+            <p>Leave Thursday, land Friday in Milan. Our first real days abroad are the weekend — when the lake is alive, the light is golden, and we're not rushing through menus between meetings we don't have.</p>
+          </div>
+          <div class="benefit-card">
+            <h4>Weekend at Lake Como</h4>
+            <p>Menaggio, boat taxis, Bellagio villas, and that bridge in Nesso — all timed for when Como feels like a vacation, not a checkbox on a Tuesday.</p>
+          </div>
+          <div class="benefit-card">
+            <h4>Weekday Dolomites</h4>
+            <p>Seceda and Carezza when the trails are quieter. Better photos, calmer ridgelines, and more room at Rifugio Friedrich August for those famous donuts.</p>
+          </div>
+          <div class="benefit-card">
+            <h4>Return on Saturday</h4>
+            <p>Fly home Saturday, September 12 — so we keep <strong>all of Sunday</strong> to unpack, rest, and ease back before Monday. No landing Sunday night and starting the week exhausted.</p>
+          </div>
+        </div>
+
+        <p class="footnote">Yes, Thursday–Saturday fits my Monday–Friday schedule — but I chose these dates because they unlock the most magic for <em>us</em>. If a different day works better for you, we change it together.</p>
+
+        <h3 style="margin-top: 2.5rem; color: var(--charcoal);">Our travel week at a glance</h3>
+        <div class="calendar-strip">
+          <div class="cal-day sage">
+            <div class="day-name">Wed</div>
+            <div class="day-date">Aug 26</div>
+            <div class="day-label">You work — I've got prep covered</div>
+          </div>
+          <div class="cal-day highlight">
+            <div class="day-name">Thu</div>
+            <div class="day-date">Aug 27</div>
+            <div class="day-label">We depart</div>
+          </div>
+          <div class="cal-day highlight">
+            <div class="day-name">Fri</div>
+            <div class="day-date">Aug 28</div>
+            <div class="day-label">Arrive Milan</div>
+          </div>
+          <div class="cal-day">
+            <div class="day-name">Sat–Sun</div>
+            <div class="day-date">Aug 29–30</div>
+            <div class="day-label">Lake Como weekend</div>
+          </div>
+          <div class="cal-day">
+            <div class="day-name">Mon–Tue</div>
+            <div class="day-date">Aug 31–Sep 1</div>
+            <div class="day-label">Dolomites</div>
+          </div>
+          <div class="cal-day">
+            <div class="day-name">…</div>
+            <div class="day-date">Sep 2–11</div>
+            <div class="day-label">Venice · Dubrovnik · Puglia · Amalfi</div>
+          </div>
+          <div class="cal-day highlight">
+            <div class="day-name">Sat</div>
+            <div class="day-date">Sep 12</div>
+            <div class="day-label">Fly home from Naples</div>
+          </div>
+          <div class="cal-day sage">
+            <div class="day-name">Sun</div>
+            <div class="day-date">Sep 13</div>
+            <div class="day-label">Recovery day — together</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. For Alisha -->
+    <section id="for-alisha" class="alt-bg">
+      <div class="inner split">
+        <div class="content">
+          <p class="eyebrow">Before we even pack</p>
+          <h2>For you, Alisha</h2>
+          <p class="lead">I know you work the Wednesday before we leave. You shouldn't have to carry the mental load of getting us trip-ready on top of a full day at work.</p>
+          <ul class="promise-list">
+            <li><strong>Packing</strong> — we'll build the checklist together; I'll handle the logistics and the "did we forget adapters?" panic.</li>
+            <li><strong>Home</strong> — whatever needs doing before we lock the door, I'll take the lead so you can breathe after Wednesday.</li>
+            <li><strong>Travel days</strong> — airports, rental car, connections — that's on me. You get to show up and be present.</li>
+            <li><strong>The trip itself</strong> — this adventure is designed around making you feel cared for, not dragged along an itinerary.</li>
+          </ul>
+          <p>This presentation is a proposal, not a contract. Your comfort matters more than any date on a calendar.</p>
+        </div>
+        <div class="media rounded">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Menaggio_Lago_di_Como.jpg/1280px-Menaggio_Lago_di_Como.jpg" alt="Menaggio on Lake Como" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Route overview -->
+    <section id="timeline" class="sage-bg">
+      <div class="inner">
+        <p class="eyebrow">The route — proposed, not locked</p>
+        <h2>Our journey, stop by stop</h2>
+        <p class="lead">One rental car through northern Italy, then planes, trains, and ferries as we drift south and across the Adriatic. Every leg is one-way — so we can slow down or skip ahead without breaking the trip.</p>
+
+        <div class="timeline">
+          <div class="timeline-item"><span class="timeline-num">1</span><div><strong>Milan → Lake Como</strong> — Menaggio base, 2 days on the water</div></div>
+          <div class="timeline-item"><span class="timeline-num">2</span><div><strong>Scenic drive → Bolzano / Dolomites</strong> — mountains, refugio, ridgelines</div></div>
+          <div class="timeline-item"><span class="timeline-num">3</span><div><strong>Venice</strong> — drop the car, gondolas, cicchetti, house wine</div></div>
+          <div class="timeline-item"><span class="timeline-num">4</span><div><strong>Dubrovnik, Croatia</strong> — Old Town, throne, Banje Beach</div></div>
+          <div class="timeline-item"><span class="timeline-num">5</span><div><strong>Day trip → Herceg Novi, Montenegro</strong> — by boat across the bay</div></div>
+          <div class="timeline-item"><span class="timeline-num">6</span><div><strong>Bari & Polignano a Mare, Puglia</strong> — before the crowds find it</div></div>
+          <div class="timeline-item"><span class="timeline-num">7</span><div><strong>Naples & the Amalfi Coast</strong> — Vesuvius, Positano, Capri</div></div>
+          <div class="timeline-item"><span class="timeline-num">8</span><div><strong>Fly home from Naples</strong> — Saturday, with Sunday to recover</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Lake Como -->
+    <section id="lake-como" class="destination">
+      <div class="inner">
+        <div class="split">
+          <div class="content">
+            <p class="eyebrow">Stop 1 · Weekend on the water</p>
+            <h2>Lake Como</h2>
+            <p class="lead">You'll wake up in Menaggio with the Alps reflected on the lake. We'll hop water taxis from village to village, tour the villas of Bellagio, and — if you're brave — find the famous diving spot at the Ponte di Nesso.</p>
+            <ul class="highlights">
+              <li>Stay in Menaggio — quieter charm, easy ferry access</li>
+              <li>Boat taxis around the lake from one picturesque shore to the next</li>
+              <li>Jump off the bridge in Nesso (optional — I'll go first)</li>
+              <li>Villa del Balbianello & Villa Melzi gardens in Bellagio</li>
+              <li>Varenna's lakeside promenade and gelato at sunset</li>
+            </ul>
+            <div class="proposed"><strong>Proposed:</strong> 2 days · Arrive Friday, explore Saturday–Sunday</div>
+            <div class="video-wrap">
+              <iframe src="https://www.youtube.com/embed/uIe3ZKGF04M?rel=0" title="Lake Como travel" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+          </div>
+          <div class="media rounded">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Sentiero_del_Viandante_DSC_6340_%2814020554463%29.jpg/1280px-Sentiero_del_Viandante_DSC_6340_%2814020554463%29.jpg" alt="Lake Como shoreline near Bellagio" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Drive to Bolzano -->
+    <section id="drive-bolzano" class="alt-bg destination">
+      <div class="inner">
+        <div class="split reverse">
+          <div class="content">
+            <p class="eyebrow">Stop 2 · The scenic transition</p>
+            <h2>Drive to Bolzano</h2>
+            <p class="lead">One of the most beautiful drives in Europe — from alpine lakes through the Brenner corridor into South Tyrol, where Italian espresso meets Austrian alpine culture and the Dolomites rise like cathedrals of stone.</p>
+            <ul class="highlights">
+              <li>Window-down moments through mountain passes</li>
+              <li>Bolzano's medieval arcades and Ötzi Museum</li>
+              <li>First taste of canederli and speck in the Dolomites foothills</li>
+            </ul>
+            <div class="proposed"><strong>Proposed:</strong> Scenic full-day drive · Monday</div>
+            <div class="video-wrap">
+              <iframe src="https://www.youtube.com/embed/kstH_lMc6f0?rel=0" title="Dolomites drive" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+          </div>
+          <div class="media rounded">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Faloria_Cortina_d%27Ampezzo_10.jpg/960px-Faloria_Cortina_d%27Ampezzo_10.jpg" alt="Dolomites near Cortina d'Ampezzo" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Dolomites -->
+    <section id="dolomites" class="destination">
+      <div class="inner">
+        <div class="split">
+          <div class="content">
+            <p class="eyebrow">Stop 3 · Weekday magic</p>
+            <h2>The Italian Dolomites</h2>
+            <p class="lead">This is why Thursday matters — we're hiking Seceda on a weekday when the ridgeline breathes. We'll see Lago di Carezza's emerald water, stay a night at Rifugio Friedrich August, and earn those legendary donuts at altitude.</p>
+            <ul class="highlights">
+              <li>Seceda ridgeline hike — the famous "ocean of peaks" panorama</li>
+              <li>Lago di Carezza (Karersee) — rainbow lake, 20-minute loop</li>
+              <li>Optional: Lago di Braies — the postcard lake (if we want the crowds)</li>
+              <li>Overnight at Rifugio Friedrich August + their famous donuts</li>
+              <li>Less crowded trails — better photos, more solitude</li>
+            </ul>
+            <div class="proposed"><strong>Proposed:</strong> 2 days · Tuesday–Wednesday in the mountains</div>
+            <div class="video-wrap">
+              <iframe src="https://www.youtube.com/embed/VT8xbAAp6cc?rel=0" title="Seceda Dolomites" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+          </div>
+          <div class="media rounded">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Geislergruppe.jpg/1280px-Geislergruppe.jpg" alt="Geisler peaks, Dolomites near Seceda" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Venice -->
+    <section id="venice" class="alt-bg destination">
+      <div class="inner">
+        <div class="split reverse">
+          <div class="content">
+            <p class="eyebrow">Stop 4 · The floating city</p>
+            <h2>Venice</h2>
+            <p class="lead">We drop the rental and surrender to canals. A gondola at golden hour, cicchetti in a bacaro, house wine that costs less than bottled water at home — and nowhere to be except lost together in the world's most romantic maze.</p>
+            <ul class="highlights">
+              <li>Drop rental — foot and vaporetto only</li>
+              <li>Romantic gondola ride through quiet canals</li>
+              <li>St. Mark's Basilica & Doge's Palace (book ahead)</li>
+              <li>Rialto Market morning, cicchetti crawl by evening</li>
+              <li>Get lost in Castello — the neighborhood tourists skip</li>
+            </ul>
+            <div class="proposed"><strong>Proposed:</strong> 2–3 days · Thursday–Friday</div>
+            <div class="video-wrap">
+              <iframe src="https://www.youtube.com/embed/AK6dYrJpa-s?rel=0" title="Venice Italy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+          </div>
+          <div class="media rounded">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Venezia_aerial_view.jpg/1280px-Venezia_aerial_view.jpg" alt="Aerial view of Venice" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Dubrovnik -->
+    <section id="dubrovnik" class="destination">
+      <div class="inner">
+        <div class="split">
+          <div class="content">
+            <p class="eyebrow">Stop 5 · Adriatic weekend</p>
+            <h2>Dubrovnik, Croatia</h2>
+            <p class="lead">One-way flight to King's Landing. We stay in the Old Town, walk the city walls at sunset, claim a spot on Plaža Banje, and yes — I'll sit on the Iron Throne like the Game of Thrones geek I proudly am. You get the sun; I get five minutes of nerd joy.</p>
+            <ul class="highlights">
+              <li>Old Town Dubrovnik — marble streets, sea on every side</li>
+              <li>Iron Throne & Lovrijenac Fortress (GoT filming locations)</li>
+              <li>City walls walk — best views in the Adriatic</li>
+              <li>Plaža Banje beach — swim, sun, relax</li>
+              <li>Fresh seafood and Croatian wine on the terrace</li>
+            </ul>
+            <div class="proposed"><strong>Proposed:</strong> Weekend stay · 2–3 days</div>
+            <div class="video-wrap">
+              <iframe src="https://www.youtube.com/embed/TpyPF62bIrw?rel=0" title="Dubrovnik Croatia" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+          </div>
+          <div class="media rounded">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/The_walls_of_the_fortress_and_View_of_the_old_city._panorama.jpg/1280px-The_walls_of_the_fortress_and_View_of_the_old_city._panorama.jpg" alt="Dubrovnik Old Town from the city walls" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. Montenegro -->
+    <section id="montenegro" class="alt-bg destination">
+      <div class="inner">
+        <div class="split reverse">
+          <div class="content">
+            <p class="eyebrow">Stop 6 · Day trip</p>
+            <h2>Herceg Novi, Montenegro</h2>
+            <p class="lead">A boat day across the Bay of Kotor — another country, another coastline, without changing our base. Herceg Novi's fortresses, seafood by the water, and views that make you forget you're on a schedule at all.</p>
+            <ul class="highlights">
+              <li>Boat or ferry from Dubrovnik — bay scenery the whole way</li>
+              <li>Herceg Novi old town & seaside promenade</li>
+              <li>Kotor Bay views — fjord-like beauty</li>
+              <li>Lunch with Montenegrin wine — back by evening</li>
+            </ul>
+            <div class="proposed"><strong>Proposed:</strong> Day trip · one golden day</div>
+            <div class="video-wrap">
+              <iframe src="https://www.youtube.com/embed/Mqg7-6Npucs?rel=0" title="Bay of Kotor Montenegro" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+          </div>
+          <div class="media rounded">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Kotor_aerial_1.jpg/1280px-Kotor_aerial_1.jpg" alt="Bay of Kotor, Montenegro" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. Bari / Puglia -->
+    <section id="puglia" class="destination">
+      <div class="inner">
+        <div class="split">
+          <div class="content">
+            <p class="eyebrow">Stop 7 · Italy's hidden coast</p>
+            <h2>Bari & Polignano a Mare</h2>
+            <p class="lead">The gem of Puglia before the world fully discovers it. Polignano's white cliffs plunge into turquoise water; Bari vecchia serves orecchiette made by grandmothers in doorways. We slow down here — on purpose.</p>
+            <ul class="highlights">
+              <li>Polignano a Mare — white Adriatic medieval coastal city</li>
+              <li>Lama Monachile beach & cliffside views</li>
+              <li>Bari Old Town — pasta made in plain sight</li>
+              <li>One-way flight or ferry from Dubrovnik</li>
+            </ul>
+            <div class="proposed"><strong>Proposed:</strong> Slow stay · 2–3 days in Polignano</div>
+            <div class="video-wrap">
+              <iframe src="https://www.youtube.com/embed/bumK7IIVOKE?rel=0" title="Adriatic coast to Puglia" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+          </div>
+          <div class="media rounded">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/70044_Polignano_A_Mare_BA%2C_Italy_-_panoramio_%284%29.jpg/1280px-70044_Polignano_A_Mare_BA%2C_Italy_-_panoramio_%284%29.jpg" alt="Polignano a Mare, Puglia" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12. Naples & Amalfi -->
+    <section id="amalfi" class="alt-bg destination">
+      <div class="inner">
+        <div class="split reverse">
+          <div class="content">
+            <p class="eyebrow">Stop 8 · Grand finale</p>
+            <h2>Naples & the Amalfi Coast</h2>
+            <p class="lead">High-speed train south to where Italy gets loud, delicious, and vertical. We hike the crater of Mt. Vesuvius and stand where Pompeii fell in 79 AD. Positano's pastel cliffs, a boat day to Capri, and a drink at the top of the chair lift — the coast everyone dreams about.</p>
+            <ul class="highlights">
+              <li>Mt. Vesuvius summit hike — crater views over the bay</li>
+              <li>Pompeii or Herculaneum — history under your feet</li>
+              <li>Positano — colorful hillside architecture</li>
+              <li>Boat ferry day trip to Capri</li>
+              <li>Chair lift to the top — drink with the whole coast at your feet</li>
+              <li>Fly home from Naples · Saturday Sep 12</li>
+            </ul>
+            <div class="proposed"><strong>Proposed:</strong> 3–4 days · Amalfi finale before we fly home</div>
+            <div class="video-wrap">
+              <iframe src="https://www.youtube.com/embed/SdwWg82OsMA?rel=0" title="Amalfi Coast Positano" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+          </div>
+          <div class="media rounded">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Positano_Sunset.JPG/1280px-Positano_Sunset.JPG" alt="Positano at sunset, Amalfi Coast" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 13. Flexibility -->
+    <section id="flexibility">
+      <div class="inner">
+        <p class="eyebrow">Your trip, our trip</p>
+        <h2>This is a proposal — not a prison</h2>
+        <p class="lead">What you're seeing is a jam-packed dream list. We can edit, cut, or stretch anything. One-way flights and trains mean we're never trapped — only invited.</p>
+
+        <div class="two-paths">
+          <div class="path-card">
+            <h4>Slow down</h4>
+            <p>Stay an extra night on Como or Polignano. Skip a hop. Trade a hike for a long lunch. Less "seeing Europe," more <em>being</em> there together.</p>
+          </div>
+          <div class="path-card">
+            <h4>See more</h4>
+            <p>Keep the pace, add Braies, extend Dubrovnik, squeeze in Ravello. If we're both energized, we ride the momentum.</p>
+          </div>
+        </div>
+
+        <p style="margin-top: 1.5rem;">The Thursday departure? That's my best offer for how we start and end strong — but if you want a different day, we find one. I'd rather have you excited than have a perfect calendar.</p>
+      </div>
+    </section>
+
+    <!-- 14. Closing -->
+    <section id="closing" class="closing">
+      <div class="inner">
+        <p class="eyebrow" style="color: var(--terracotta-soft);">For my favorite person</p>
+        <h2>Alisha, I love you</h2>
+        <p class="letter">
+          I made this because I can't stop picturing us on that lake, on that ridgeline, in that gondola, with a drink in hand and nowhere else I'd rather be. You're not being asked to approve a spreadsheet — you're being invited into the adventure of our lives with someone who will handle the hard parts so you can enjoy the beautiful ones.
+        </p>
+        <p class="letter">
+          I'm beyond excited for this European journey with you. Whatever we keep, change, or throw out — I just want to experience it together.
+        </p>
+        <p class="signature">With all my love · Your partner in every detour</p>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    (function () {
+      const sections = document.querySelectorAll('section');
+      const progress = document.getElementById('progress');
+      let currentIndex = 0;
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              const idx = Array.from(sections).indexOf(entry.target);
+              if (idx >= 0) currentIndex = idx;
+              const pct = ((currentIndex + 1) / sections.length) * 100;
+              progress.style.width = pct + '%';
+            }
+          });
+        },
+        { threshold: 0.25, rootMargin: '-5% 0px' }
+      );
+
+      sections.forEach((s) => observer.observe(s));
+      sections[0]?.classList.add('visible');
+
+      function goTo(index) {
+        if (index < 0 || index >= sections.length) return;
+        sections[index].scrollIntoView({ behavior: 'smooth' });
+      }
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowDown' || e.key === 'ArrowRight' || e.key === ' ') {
+          e.preventDefault();
+          goTo(currentIndex + 1);
+        } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
+          e.preventDefault();
+          goTo(currentIndex - 1);
+        }
+      });
+
+      let touchStartY = 0;
+      document.addEventListener('touchstart', (e) => {
+        touchStartY = e.touches[0].clientY;
+      }, { passive: true });
+    })();
+  </script>
+</body>
+</html>
